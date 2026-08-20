@@ -252,6 +252,40 @@ def deep_probe(host):
     print(json.dumps(trimmed, indent=2))
 
 
+def raw_dump(host):
+    """Dump one week payload verbatim.
+
+    Every probed week returned days with no food items, which is either a
+    genuinely unpublished menu or a wrong assumption about the response shape.
+    Only the raw JSON can tell the two apart.
+    """
+    print("\n[9] raw week payload")
+    url = "%s/menu/api/weeks/school/springfield-plains/menu-type/lunch/2026/03/09/" % host
+    status, payload, err = fetch_json(url)
+    print("    GET %s -> %s" % (url, err or "HTTP %d" % status))
+    if payload is None:
+        return
+    print("    top-level keys: %s" % sorted(payload.keys()))
+    blob = json.dumps(payload, indent=2)
+    print("    payload size: %d chars" % len(blob))
+    print(blob[:6000])
+    if len(blob) > 6000:
+        print("    ... truncated ...")
+
+    # The digest endpoint is Nutrislice's other public read path; if the week
+    # endpoint is empty but digest is not, the collector should use digest.
+    print("\n[10] digest endpoint probe")
+    for date_str in ("2026-03-09", "2025-09-15", "2026-09-08"):
+        d_url = "%s/menu/api/digest/school/springfield-plains/menu-type/lunch/date/%s/" % (
+            host, date_str)
+        status, data, err = fetch_json(d_url)
+        note = err or "HTTP %d" % status
+        size = len(json.dumps(data)) if data is not None else 0
+        print("    %s -> %s (%d chars)" % (d_url, note, size))
+        if data is not None and size > 2:
+            print(json.dumps(data, indent=2)[:2500])
+
+
 def main():
     monday = monday_of_this_week()
     print("Nutrislice discovery for district 'clarkston'")
@@ -321,6 +355,7 @@ def main():
     print("    Put the confirmed slugs into the CONFIG block of collect.py.")
 
     deep_probe(host)
+    raw_dump(host)
     return 0
 
 
