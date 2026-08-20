@@ -286,6 +286,54 @@ def raw_dump(host):
             print(json.dumps(data, indent=2)[:2500])
 
 
+# Every target week came back with menu_items == [] and
+# has_unpublished_menus == false, and the raw payload shape matches the spec.
+# So the parser is not wrong -- the menus are genuinely empty. The open question
+# is whether this district instance carries data for ANY school on ANY date, or
+# is dormant. Sweep every school and a spread of dates to settle it.
+SWEEP_DATES = [
+    "2025-09-08", "2025-10-06", "2025-11-10", "2025-12-08",
+    "2026-01-12", "2026-02-09", "2026-04-13", "2026-05-11",
+]
+
+
+def sweep_district(host):
+    print("\n[11] district-wide sweep: any school, any date, any items?")
+    status, payload, err = fetch_json("%s/menu/api/schools/?format=json" % host)
+    if payload is None:
+        print("    schools endpoint failed: %s" % err)
+        return
+    slugs = [
+        obj.get("slug") for obj in iter_school_objects(payload)
+        if isinstance(obj, dict) and obj.get("slug")
+    ]
+    hits = []
+    for school in slugs:
+        best = 0
+        for iso in SWEEP_DATES:
+            y, m, d = (int(x) for x in iso.split("-"))
+            url = "%s/menu/api/weeks/school/%s/menu-type/lunch/%d/%02d/%02d/" % (
+                host, school, y, m, d)
+            st, data, e = fetch_json(url)
+            if data is None:
+                continue
+            n = sum(
+                1 for day in (data.get("days") or [])
+                for item in (day.get("menu_items") or [])
+            )
+            if n:
+                hits.append((school, iso, n))
+                best = n
+                break  # one data-bearing week is enough to prove the school is live
+        print("    %-32s %s" % (school, "items on a probed week" if best else "empty on all probed weeks"))
+    print("\n    schools with any menu data: %d of %d" % (len(hits), len(slugs)))
+    for school, iso, n in hits:
+        print("        %-32s week %s  %d items" % (school, iso, n))
+    if not hits:
+        print("        NONE. This district instance publishes no menu items at")
+        print("        any probed school/date, so the board has no data source yet.")
+
+
 def main():
     monday = monday_of_this_week()
     print("Nutrislice discovery for district 'clarkston'")
@@ -356,6 +404,7 @@ def main():
 
     deep_probe(host)
     raw_dump(host)
+    sweep_district(host)
     return 0
 
 
