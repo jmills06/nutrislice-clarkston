@@ -334,6 +334,65 @@ def sweep_district(host):
         print("        any probed school/date, so the board has no data source yet.")
 
 
+def full_year_scan(host):
+    """Walk every Monday of a school year looking for a week with real food items.
+
+    The district sweep found exactly one menu_item in the week of 2025-10-06 at
+    every school and zero items carrying a food object, which looks like a single
+    district-wide note rather than a menu. Scanning every week distinguishes
+    "this district never publishes to the API" from "we happened to probe the
+    wrong weeks".
+    """
+    print("\n[12] raw dump of the one week that had an item")
+    url = "%s/menu/api/weeks/school/springfield-plains/menu-type/lunch/2025/10/06/" % host
+    status, payload, err = fetch_json(url)
+    print("    GET %s -> %s" % (url, err or "HTTP %d" % status))
+    if payload is not None:
+        for day in payload.get("days") or []:
+            items = day.get("menu_items") or []
+            if items:
+                print("    %s: %s" % (day.get("date"), json.dumps(items, indent=2)[:2500]))
+
+    print("\n[13] every-Monday scan, springfield-plains + sashabaw-middle lunch")
+    start = date(2025, 8, 25)
+    weeks = [start + timedelta(days=7 * i) for i in range(43)]
+    any_food = []
+    for school in TARGET_SCHOOLS:
+        line = []
+        for monday in weeks:
+            url = "%s/menu/api/weeks/school/%s/menu-type/lunch/%d/%02d/%02d/" % (
+                host, school, monday.year, monday.month, monday.day)
+            st, data, e = fetch_json(url)
+            if data is None:
+                line.append("?")
+                continue
+            n_items = sum(len(d.get("menu_items") or []) for d in (data.get("days") or []))
+            n_food = sum(
+                1 for d in (data.get("days") or [])
+                for i in (d.get("menu_items") or [])
+                if isinstance(i.get("food"), dict)
+            )
+            if n_food:
+                any_food.append((school, monday.isoformat(), n_food))
+                line.append("F")
+            elif n_items:
+                line.append("i")
+            else:
+                line.append(".")
+        print("    %-22s %s" % (school, "".join(line)))
+    print("    legend: F=week has food items, i=items but no food, .=empty, ?=fetch failed")
+    print("    first Monday scanned: %s   last: %s" % (
+        weeks[0].isoformat(), weeks[-1].isoformat()))
+    if any_food:
+        print("\n    weeks with real food items:")
+        for school, iso, n in any_food:
+            print("        %-22s %s  %d" % (school, iso, n))
+    else:
+        print("\n    No week in the scanned range carries a single food item for")
+        print("    either target school. The API is reachable and the slugs are")
+        print("    correct, but Clarkston has published no menu content to it.")
+
+
 def main():
     monday = monday_of_this_week()
     print("Nutrislice discovery for district 'clarkston'")
@@ -405,6 +464,7 @@ def main():
     deep_probe(host)
     raw_dump(host)
     sweep_district(host)
+    full_year_scan(host)
     return 0
 
 
