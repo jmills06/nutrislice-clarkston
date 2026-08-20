@@ -152,6 +152,106 @@ def probe_week(host, school, menu_type, monday):
     return url, status, len(days), with_food or items, None
 
 
+# --- Section [6] ------------------------------------------------------------
+# The current-week probe can return 7 days with zero items simply because school
+# is not in session yet. Confirming a slug really carries menu data, and learning
+# the payload's field shape (does food_category exist? how are sections marked?),
+# requires probing weeks that fall inside a school year.
+PROBE_WEEKS = [
+    "2026-09-07",  # week Clarkston's 2026-27 year is expected to open
+    "2026-09-14",
+    "2026-10-05",
+    "2025-09-15",  # prior school year: proves the endpoint retains real menus
+    "2026-03-09",  # mid-year of the 2025-26 calendar
+]
+
+
+def census(payload, cats, food_keys, section_titles, icon_names):
+    """Accumulate field-shape facts across every probed payload."""
+    for day in payload.get("days") or []:
+        for item in day.get("menu_items") or []:
+            if item.get("is_section_title"):
+                title = (item.get("text") or "").strip()
+                if title:
+                    section_titles[title] = section_titles.get(title, 0) + 1
+            food = item.get("food")
+            if not isinstance(food, dict):
+                continue
+            food_keys.update(food.keys())
+            cat = food.get("food_category")
+            key = repr(cat)
+            cats[key] = cats.get(key, 0) + 1
+            for icon in food.get("icons") or []:
+                name = icon.get("name") if isinstance(icon, dict) else str(icon)
+                if name:
+                    icon_names[name] = icon_names.get(name, 0) + 1
+
+
+def deep_probe(host):
+    cats, food_keys, section_titles, icon_names = {}, set(), {}, {}
+    sample = None
+    print("\n[6] in-session week probe")
+    print("    week        school                  menu-type   status  days  fooditems")
+    for iso in PROBE_WEEKS:
+        y, m, d = (int(x) for x in iso.split("-"))
+        for school in TARGET_SCHOOLS:
+            for menu_type in ("breakfast", "lunch"):
+                url = "%s/menu/api/weeks/school/%s/menu-type/%s/%d/%02d/%02d/" % (
+                    host, school, menu_type, y, m, d)
+                status, payload, err = fetch_json(url)
+                n_days = n_food = 0
+                if payload is not None:
+                    days = payload.get("days") or []
+                    n_days = len(days)
+                    n_food = sum(
+                        1 for day in days
+                        for item in (day.get("menu_items") or [])
+                        if isinstance(item.get("food"), dict)
+                    )
+                    census(payload, cats, food_keys, section_titles, icon_names)
+                    if sample is None and n_food:
+                        for day in days:
+                            if any(isinstance(i.get("food"), dict)
+                                   for i in (day.get("menu_items") or [])):
+                                sample = (school, menu_type, day)
+                                break
+                print("    %-10s  %-22s  %-10s  %-6s  %-4d  %-4d%s" % (
+                    iso, school, menu_type, err or status, n_days, n_food,
+                    "  <== DATA" if n_food else ""))
+
+    print("\n[7] field-shape census across all probed weeks")
+    print("    food_category values: %s" % (
+        ", ".join("%s x%d" % (k, v) for k, v in sorted(cats.items())) or "NONE SEEN"))
+    print("    food object keys: %s" % ", ".join(sorted(food_keys)) or "NONE")
+    print("    section titles: %s" % (
+        ", ".join("%s x%d" % (k, v) for k, v in sorted(section_titles.items()))
+        or "NONE SEEN"))
+    print("    icons: %s" % (
+        ", ".join("%s x%d" % (k, v) for k, v in sorted(icon_names.items())) or "NONE"))
+
+    print("\n[8] sample day (first day found containing food items)")
+    if sample is None:
+        print("    No probed week contained any food items.")
+        return
+    school, menu_type, day = sample
+    print("    %s / %s / %s" % (school, menu_type, day.get("date")))
+    trimmed = []
+    for item in (day.get("menu_items") or [])[:40]:
+        food = item.get("food")
+        trimmed.append({
+            "position": item.get("position"),
+            "is_section_title": item.get("is_section_title"),
+            "text": item.get("text"),
+            "station_id": item.get("station_id"),
+            "food": None if not isinstance(food, dict) else {
+                "name": food.get("name"),
+                "food_category": food.get("food_category"),
+                "description": (food.get("description") or "")[:60],
+            },
+        })
+    print(json.dumps(trimmed, indent=2))
+
+
 def main():
     monday = monday_of_this_week()
     print("Nutrislice discovery for district 'clarkston'")
@@ -219,6 +319,8 @@ def main():
             print("        %-28s days=%d items=%d" % (menu_type, days, items))
     print("\n    Host that answered: %s" % host)
     print("    Put the confirmed slugs into the CONFIG block of collect.py.")
+
+    deep_probe(host)
     return 0
 
 
