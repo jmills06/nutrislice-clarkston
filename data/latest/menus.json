@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-20T19:09:22Z",
+  "generated_utc": "2026-08-20T19:11:09Z",
   "district": "clarkston",
   "schools": {
     "springfield-plains": {
@@ -24,13 +24,13 @@
           "lunch": {
             "entrees": [
               "Cereal, Goldfish & Yogurt Fun Lunch",
-              "Classic American Cheeseburger",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese"
+              "Classic American Cheeseburger"
             ],
             "sides": [
               "French Fries",
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Whole Grain Dinner Roll",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
@@ -66,12 +66,12 @@
           "lunch": {
             "entrees": [
               "Boneless Chicken Wings",
-              "Macaroni and Cheese",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese"
+              "Macaroni and Cheese"
             ],
             "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Whole Grain Dinner Roll",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
@@ -109,12 +109,12 @@
           "lunch": {
             "entrees": [
               "Little Caesar's Cheese Pizza",
-              "EZ Jammer Wowbutter & Jelly Sandwich",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese"
+              "EZ Jammer Wowbutter & Jelly Sandwich"
             ],
             "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Whole Grain Dinner Roll",
               "Shredded Romaine Lettuce",
               "Assorted Chilled Fruit",
@@ -150,12 +150,12 @@
           "lunch": {
             "entrees": [
               "Beef Nachos",
-              "Breaded Chicken Drumstick",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese"
+              "Breaded Chicken Drumstick"
             ],
             "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Whole Grain Dinner Roll",
               "Seasoned Black Beans",
               "Seasoned Corn",
@@ -192,13 +192,13 @@
           "lunch": {
             "entrees": [
               "Mini Maple Pancakes",
-              "Crispy Chicken Patty Sandwich",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese"
+              "Crispy Chicken Patty Sandwich"
             ],
             "sides": [
               "Pork Sausage Patty",
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Whole Grain Dinner Roll",
               "Tater Tots",
               "Assorted Chilled Fruit",
