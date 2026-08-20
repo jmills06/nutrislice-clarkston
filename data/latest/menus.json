@@ -1,0 +1,401 @@
+{
+  "generated_utc": "2026-08-20T19:30:31Z",
+  "district": "clarkston",
+  "schools": {
+    "springfield-plains": {
+      "label": "Springfield Plains",
+      "days": {
+        "2026-08-24": {
+          "breakfast": {
+            "entrees": [
+              "Apple Frudel",
+              "WG Chocolate Chocolate Chip Muffin"
+            ],
+            "sides": [
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Low Fat Mozzarella String Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Cereal, Goldfish & Yogurt Fun Lunch",
+              "Classic American Cheeseburger"
+            ],
+            "sides": [
+              "French Fries",
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
+              "Whole Grain Dinner Roll",
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Fresh Carrots",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Sliced Cucumbers",
+              "Fresh Celery Sticks",
+              "Margarine"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-25": {
+          "breakfast": {
+            "entrees": [
+              "Cherry Frudel",
+              "Banana Chocolate Chunk BeneFIT Bar"
+            ],
+            "sides": [
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Co-Jack Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Boneless Chicken Wings",
+              "Macaroni and Cheese"
+            ],
+            "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
+              "Whole Grain Dinner Roll",
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Fresh Carrots",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Sliced Cucumbers",
+              "Fresh Celery Sticks",
+              "Margarine"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "BBQ Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-26": {
+          "breakfast": {
+            "entrees": [
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Whole Grain Apple Cinnamon Muffin"
+            ],
+            "sides": [
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Low Fat Mozzarella String Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Little Caesar's Cheese Pizza",
+              "EZ Jammer Wowbutter & Jelly Sandwich"
+            ],
+            "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
+              "Whole Grain Dinner Roll",
+              "Shredded Romaine Lettuce",
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Fresh Carrots",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Sliced Cucumbers",
+              "Margarine"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-27": {
+          "breakfast": {
+            "entrees": [
+              "Mini Cinnis",
+              "WG Banana Muffin"
+            ],
+            "sides": [
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Co-Jack Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Beef Nachos",
+              "Breaded Chicken Drumstick"
+            ],
+            "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
+              "Whole Grain Dinner Roll",
+              "Seasoned Black Beans",
+              "Seasoned Corn",
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Fresh Carrots",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Sliced Cucumbers",
+              "Margarine"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-28": {
+          "breakfast": {
+            "entrees": [
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Whole Grain Blueberry Muffin"
+            ],
+            "sides": [
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Low Fat Mozzarella String Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Mini Maple Pancakes",
+              "Crispy Chicken Patty Sandwich"
+            ],
+            "sides": [
+              "Pork Sausage Patty",
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
+              "Whole Grain Dinner Roll",
+              "Tater Tots",
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Fresh Carrots",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Sliced Cucumbers",
+              "Margarine"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        }
+      }
+    },
+    "sashabaw-middle": {
+      "label": "Sashabaw Middle",
+      "days": {
+        "2026-08-24": {
+          "lunch": {
+            "entrees": [
+              "Chili Dog",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Edamame",
+              "Whole Grain Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "French Fries",
+              "Boston Baked Beans"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-25": {
+          "lunch": {
+            "entrees": [
+              "Beef Nachos",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Brown Rice",
+              "Seasoned Black Beans",
+              "Whole Grain Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "Curly Fries"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-26": {
+          "lunch": {
+            "entrees": [
+              "Boneless Chicken Wings",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Macaroni and Cheese",
+              "Roasted Broccoli",
+              "Whole Grain Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "French Fries"
+            ],
+            "staples": [
+              "Buffalo Ranch Sauce",
+              "Dip'n Sauce",
+              "Honey Buffalo Sauce",
+              "BBQ Sauce",
+              "Light Ranch Dressing",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-27": {
+          "lunch": {
+            "entrees": [
+              "Macaroni and Cheese",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks",
+              "Meat Lover's Pizza"
+            ],
+            "sides": [
+              "BBQ Pulled Pork",
+              "Whole Grain Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "Curly Fries"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        },
+        "2026-08-28": {
+          "lunch": {
+            "entrees": [
+              "Buttermilk Pancakes",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Scrambled Eggs",
+              "Pork Sausage Patty",
+              "Hash Brown Patty",
+              "Whole Grain Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "French Fries"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 # Nutrislice discovery findings
 
-Run: 2026-08-20, via `tools/discover.py` on a GitHub runner
-(this project's Claude Code session has `*.nutrislice.com` blocked by its
-network egress proxy, so discovery ran in CI instead).
+Run 2026-08-20 via `tools/discover.py`. This project's Claude Code session has
+`*.nutrislice.com` blocked by its network egress proxy, so discovery ran on a
+GitHub Actions runner instead.
 
 ## Confirmed constants
 
@@ -10,68 +10,76 @@ network egress proxy, so discovery ran in CI instead).
 HOST        https://clarkston.api.nutrislice.com
 SCHOOLS     springfield-plains   "Springfield Plains Elementary"
             sashabaw-middle      "Sashabaw Middle"
-MENU TYPES  breakfast, lunch     (both schools, both return HTTP 200)
+MENU TYPES  breakfast, lunch
 ```
 
-Source: `GET /menu/api/schools/?format=json` returns 12 schools, each with an
-inline `menu_types[]` carrying `slug` + `name`. `springfield-plains` advertises
-`breakfast` and `lunch`; `sashabaw-middle` advertises only `lunch`, but its
-`breakfast` week endpoint also returns 200.
+`GET /menu/api/schools/?format=json` returns 12 schools, each with an inline
+`menu_types[]` carrying `slug` + `name`. `springfield-plains` advertises
+`breakfast` and `lunch`; `sashabaw-middle` advertises only `lunch`, though its
+`breakfast` week endpoint also returns HTTP 200 (with no content -- see below).
 
-Ruled out (all HTTP 404): `elementary-lunch`, `elementary-breakfast`, `ms-lunch`,
+Ruled out, all HTTP 404: `elementary-lunch`, `elementary-breakfast`, `ms-lunch`,
 `ms-breakfast`, `middle-school-*`, `secondary-*`, `k-5-*`, `6-8-*`, every
-per-school menu-type endpoint, and the `digest/school/.../date/...` endpoint.
+per-school menu-type endpoint, and `digest/school/.../date/...`.
 
-## Week endpoint contract (verified against a real response)
+## Week endpoint contract
 
 `GET /menu/api/weeks/school/{school}/menu-type/{type}/{YYYY}/{MM}/{DD}/`
 
-Root object holds `days[]` and `bold_all_entrees_enabled`. Each day:
+Root holds `days[]` plus `bold_all_entrees_enabled`. Each day is
+`{date, has_unpublished_menus, menu_items[]}`. Three kinds of row appear in
+`menu_items[]`:
 
-```json
-{ "date": "2026-03-09", "has_unpublished_menus": false, "menu_items": [] }
+* **Station header** -- `is_section_title: true`, `is_station_header: true`,
+  `text: "Main Entrees"`, a `station_id`, `food: null`.
+* **Food** -- `is_section_title: false`, `text: ""`, and a populated `food`
+  object with `name`, `description`, `food_category`, `image_url`, and
+  `rounded_nutrition_info`.
+* **Holiday marker** -- `is_holiday: true`, `bold: true`, `text: "No School"`,
+  `food: null`.
+
+Station names observed: `Main Entrees`, `Alternate Entrees`, `Salad`.
+
+## Publication window
+
+Clarkston publishes roughly two weeks ahead and nothing further out. Scanning
+every Monday from 2026-08-03 to 2027-05-24:
+
+```
+springfield-plains     ...FF......................................
+sashabaw-middle        ...FF......................................
+   F = week has food items   . = empty
 ```
 
-Menu-item keys observed: `position`, `bold`, `text`, `id`, `date`,
-`is_section_title`, `no_line_break`, `blank_line`, `menu_type_id`, `food`,
-`menu_id`, `is_holiday`, `food_list`, `station_id`, `is_station_header`,
-`category`, `image`, `image_thumbnail`.
+| Week | springfield-plains | sashabaw-middle |
+|---|---|---|
+| 2026-08-24 | 86 items | 126 items |
+| 2026-08-31 | 52 items | 68 items |
 
-## Blocking finding: no menu content is published
+Weeks outside that window return HTTP 200 with seven days and empty
+`menu_items[]`. That is the normal steady state, not an error -- the collector's
+current-week + next-week fetch is sized exactly to this window.
 
-A scan of 43 consecutive Mondays (2025-08-25 through 2026-06-15), both schools,
-lunch, found **zero** items carrying a `food` object:
+### Correction
 
-```
-springfield-plains     ii....iii....i..iii.ii.i.iii.i.i......iii..
-sashabaw-middle        ii....iii....i..iii.ii.i.i.i.i.i......iii..
-   F = week has food items   i = items but no food   . = empty
-```
+An earlier pass concluded the district published no menu content at all. That
+was wrong: the scan window ran 2025-08-25 to 2026-06-15, which stopped before
+the 2026-27 school year and so never touched a published week. The prior year's
+data has rolled off (only `No School` holiday markers remain in 2025-26), which
+made an empty result look like a permanent one.
 
-A district-wide sweep of all 12 schools across 8 dates spanning the same year
-found the same: every school's only content is calendar closures, e.g.
+## Notes that shaped the collector
 
-```json
-{ "position": 0, "bold": true, "text": "No School",
-  "is_section_title": false, "food": null, "is_holiday": true }
-```
-
-`has_unpublished_menus` is `false` throughout, so there are no hidden drafts.
-Weeks in September and October 2026 are empty as well.
-
-The school list matches Clarkston Community Schools' actual buildings, so this
-is the correct district instance -- it is being used for the closure calendar
-only, not for menus.
-
-## Consequence for the collector spec
-
-The planned rule "skip items where `food` is null and `is_section_title` is
-false" would discard the `is_holiday: true` / `"No School"` markers, which are
-the only real signal this API currently carries and are exactly what the board's
-no-school state needs. Keep them as a per-day holiday flag instead.
-
-## Open question
-
-Where Clarkston actually publishes menus (PDFs, another vendor, or a different
-Nutrislice subdomain) is unresolved. The board cannot be built against this API
-until that is answered.
+* `food_category` is populated, so the position-within-section fallback in
+  `collect.py` is dormant. It stays in as a guard against a future payload that
+  drops the field.
+* Nutrislice tags salad-bar components as `food_category: "entree"` because they
+  count toward the USDA meal pattern. At Springfield Plains that put `Croutons`,
+  `Dinner Roll` and `Mixed Greens Salad with Cheese` in the entree bucket, which
+  would have headlined "Croutons" on the board. `collect.py` consults the
+  station header and demotes anything under a salad/fruit/side station.
+* `sashabaw-middle` publishes no breakfast menu. The board omits the breakfast
+  block for a school rather than rendering a permanently empty section.
+* Holiday markers carry no food, so those days end up empty and are omitted from
+  `menus.json`. The board renders a missing day as NO SCHOOL, which is the same
+  outcome.

@@ -157,12 +157,13 @@ def probe_week(host, school, menu_type, monday):
 # is not in session yet. Confirming a slug really carries menu data, and learning
 # the payload's field shape (does food_category exist? how are sections marked?),
 # requires probing weeks that fall inside a school year.
+# Clarkston publishes only a short window ahead, so the useful probes are the
+# next few weeks, not arbitrary dates deep in the school year.
 PROBE_WEEKS = [
-    "2026-09-07",  # week Clarkston's 2026-27 year is expected to open
+    "2026-08-24",
+    "2026-08-31",
+    "2026-09-07",
     "2026-09-14",
-    "2026-10-05",
-    "2025-09-15",  # prior school year: proves the endpoint retains real menus
-    "2026-03-09",  # mid-year of the 2025-26 calendar
 ]
 
 
@@ -236,7 +237,7 @@ def deep_probe(host):
     school, menu_type, day = sample
     print("    %s / %s / %s" % (school, menu_type, day.get("date")))
     trimmed = []
-    for item in (day.get("menu_items") or [])[:40]:
+    for item in (day.get("menu_items") or [])[:60]:
         food = item.get("food")
         trimmed.append({
             "position": item.get("position"),
@@ -344,7 +345,7 @@ def full_year_scan(host):
     wrong weeks".
     """
     print("\n[12] raw dump of the one week that had an item")
-    url = "%s/menu/api/weeks/school/springfield-plains/menu-type/lunch/2025/10/06/" % host
+    url = "%s/menu/api/weeks/school/springfield-plains/menu-type/lunch/2026/08/24/" % host
     status, payload, err = fetch_json(url)
     print("    GET %s -> %s" % (url, err or "HTTP %d" % status))
     if payload is not None:
@@ -354,7 +355,7 @@ def full_year_scan(host):
                 print("    %s: %s" % (day.get("date"), json.dumps(items, indent=2)[:2500]))
 
     print("\n[13] every-Monday scan, springfield-plains + sashabaw-middle lunch")
-    start = date(2025, 8, 25)
+    start = date(2026, 8, 3)
     weeks = [start + timedelta(days=7 * i) for i in range(43)]
     any_food = []
     for school in TARGET_SCHOOLS:

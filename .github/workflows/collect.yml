@@ -1,0 +1,71 @@
+name: collect
+
+on:
+  # Fired by cron-job.org at 04:30 America/Detroit. GitHub's built-in schedule:
+  # cron is unreliable for anything time-sensitive -- runs are queued on a
+  # best-effort basis and are routinely late or skipped -- so the schedule below
+  # is kept only as documentation of intent.
+  #
+  # schedule:
+  #   - cron: '30 8 * * *'   # 04:30 America/Detroit (EDT) / 03:30 (EST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Collect menus
+        run: python3 collect.py
+
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+
+          # The branch this run was dispatched from -- 'main' in production.
+          BRANCH="${GITHUB_REF_NAME}"
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/latest/menus.json
+
+          # Guard against committing nothing. Note that in practice this rarely
+          # fires: menus.json carries generated_utc, which changes every run, so
+          # an unchanged menu still produces a one-line diff and a daily commit.
+          # That is deliberate -- the board's STALE_HOURS check reads
+          # generated_utc to notice that collection has stopped, and that signal
+          # only works if the timestamp keeps moving. Dropping the timestamp
+          # would silence the daily commits and the staleness warning together.
+          if git diff --cached --quiet; then
+            echo "No menu changes; nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Update menus.json ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+
+          # Another run (or a human push) may have landed first. Rebase onto the
+          # remote and retry; -X theirs keeps this run's freshly fetched menu
+          # data, which is by definition the newer read of the API.
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${BRANCH}"; then
+              echo "Pushed on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push failed on attempt ${attempt}; rebasing and retrying."
+            git pull --rebase --autostash -X theirs origin "${BRANCH}" || true
+            sleep $((attempt * 2))
+          done
+
+          echo "Push failed after 5 attempts." >&2
+          exit 1
