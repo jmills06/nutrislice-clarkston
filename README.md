@@ -60,6 +60,13 @@ kept light.
 The run aborts without writing if any of the eight requests fail, or if zero
 days parse. A stale `menus.json` is better than a half-written one.
 
+Expect one small commit per day even when the menu has not changed:
+`menus.json` carries a `generated_utc` stamp, and the board reads it to notice
+that collection has stopped (the `STALE_HOURS` footer warning). Keeping the
+timestamp moving is what makes that warning meaningful. If the daily commit
+noise is not worth it, drop `generated_utc` from `collect.py` and the runs go
+quiet -- along with the staleness warning.
+
 `collect.yml` is `workflow_dispatch` only. GitHub's built-in `schedule:` cron is
 unreliable, so the daily run is fired externally by cron-job.org at 04:30
 America/Detroit; the `schedule:` block is left commented in the workflow as a

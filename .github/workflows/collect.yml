@@ -40,7 +40,13 @@ jobs:
 
           git add data/latest/menus.json
 
-          # Menus change rarely; most runs produce no diff at all.
+          # Guard against committing nothing. Note that in practice this rarely
+          # fires: menus.json carries generated_utc, which changes every run, so
+          # an unchanged menu still produces a one-line diff and a daily commit.
+          # That is deliberate -- the board's STALE_HOURS check reads
+          # generated_utc to notice that collection has stopped, and that signal
+          # only works if the timestamp keeps moving. Dropping the timestamp
+          # would silence the daily commits and the staleness warning together.
           if git diff --cached --quiet; then
             echo "No menu changes; nothing to commit."
             exit 0
