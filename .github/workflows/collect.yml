@@ -10,6 +10,13 @@ on:
   #   - cron: '30 8 * * *'   # 04:30 America/Detroit (EDT) / 03:30 (EST)
   workflow_dispatch:
 
+  # TEMPORARY, remove before merging to main: workflow_dispatch only becomes
+  # available once a workflow has run from the default branch, so this bootstraps
+  # the first run on the build branch. Eight requests, same as a scheduled run.
+  push:
+    branches: [claude/school-menu-board-build-k130el]
+    paths: ['collect.py', '.github/workflows/collect.yml']
+
 permissions:
   contents: write
 
