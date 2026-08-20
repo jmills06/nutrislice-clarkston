@@ -66,6 +66,15 @@ NOISE_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Stations whose contents are never a hero entree, whatever food_category says.
+# Nutrislice tags salad-bar components as food_category 'entree' because they
+# count toward the USDA meal pattern, so Springfield Plains' Salad station
+# yields "Croutons" and "Dinner Roll" as entrees unless the station is consulted.
+SIDE_STATION_RE = re.compile(
+    r"salad|fruit|vegetable|veggie|side|dessert|beverage|milk|condiment|extra",
+    re.IGNORECASE,
+)
+
 # Only used if food_category turns out to be missing across a whole payload.
 FALLBACK_ENTREES_PER_SECTION = 2
 
@@ -97,21 +106,25 @@ def normalize(name):
     return re.sub(r"\s+", " ", (name or "").strip()).lower()
 
 
-def classify(food, name):
+def classify(food, name, station):
     """Bucket one food into entree / side / staple.
 
     food_category is authoritative when present -- Clarkston populates it with
     'entree' -- so it is checked before the noise pattern, which means a dish
     whose name happens to contain a noise word is still treated as an entree.
+    The station overrides it in one direction only: a food sitting under a salad
+    or fruit station is demoted to a side no matter how it is categorized, which
+    keeps croutons off the board as a headline entree.
     """
     if (food.get("food_category") or "").strip().lower() == "entree":
-        return "entree"
+        if not (station and SIDE_STATION_RE.search(station)):
+            return "entree"
     if NOISE_RE.search(name):
         return "staple"
     return "side"
 
 
-def parse_day(day, use_fallback):
+def parse_day(day, use_fallback, stations_seen=None):
     """Turn one day's menu_items[] into {entrees, sides, staples}.
 
     Items are walked in `position` order so the board shows dishes the way the
@@ -127,10 +140,14 @@ def parse_day(day, use_fallback):
     buckets = {"entree": [], "side": [], "staple": []}
     seen = set()
     section_count = 0
+    station = ""
 
     for item in items:
         if item.get("is_section_title"):
+            station = (item.get("text") or "").strip()
             section_count = 0
+            if stations_seen is not None and station:
+                stations_seen[station] = stations_seen.get(station, 0) + 1
             continue
 
         food = item.get("food")
@@ -156,7 +173,7 @@ def parse_day(day, use_fallback):
             if bucket != "staple":
                 section_count += 1
         else:
-            bucket = classify(food, name)
+            bucket = classify(food, name, station)
 
         buckets[bucket].append(name)
 
@@ -220,6 +237,7 @@ def main():
 
     schools_out = {}
     total_days = 0
+    stations = {}
 
     for school, label in SCHOOLS.items():
         days_out = {}
@@ -233,7 +251,7 @@ def main():
                     iso = day.get("date")
                     if not iso:
                         continue
-                    parsed = parse_day(day, use_fallback)
+                    parsed = parse_day(day, use_fallback, stations)
                     if not any(parsed.values()):
                         continue  # unpublished or no-school day: omit entirely
                     days_out.setdefault(iso, {})[meal] = parsed
@@ -249,6 +267,11 @@ def main():
             "label": label,
             "days": dict(sorted(days_out.items())),
         }
+
+    # Surfaced so SIDE_STATION_RE can be re-tuned if the district renames a
+    # station or adds one the pattern does not cover.
+    log("  stations seen: %s" % ", ".join(
+        "%s x%d" % (k, v) for k, v in sorted(stations.items())) or "none")
 
     if total_days == 0:
         log("ABORT: parsed zero days across both schools; leaving existing %s "
