@@ -1,0 +1,20 @@
+# TEMPORARY: one-shot slug discovery. Delete once collect.py has the confirmed
+# slugs baked into its CONFIG block.
+#
+# Manual dispatch only. This script now walks a full school year of week
+# endpoints (~100 requests), and the community guidance for the Nutrislice API
+# asks that access be kept light -- so it must not fire on every push.
+name: discover
+
+on:
+  workflow_dispatch:
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python3 tools/discover.py
