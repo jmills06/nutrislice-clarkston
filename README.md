@@ -67,16 +67,29 @@ timestamp moving is what makes that warning meaningful. If the daily commit
 noise is not worth it, drop `generated_utc` from `collect.py` and the runs go
 quiet -- along with the staleness warning.
 
-`collect.yml` is `workflow_dispatch` only. GitHub's built-in `schedule:` cron is
-unreliable, so the daily run is fired externally by cron-job.org at 04:30
-America/Detroit; the `schedule:` block is left commented in the workflow as a
-record of intent.
+`collect.yml` runs on a GitHub `schedule:` at 08:30 UTC -- 04:30 America/Detroit
+in summer, 03:30 in winter -- so the board is fresh before the school day. The
+`:30` offset avoids the top-of-the-hour queue, which is the most contended and
+therefore the most delayed slot.
+
+GitHub schedules runs best-effort, so a run can be late or occasionally skipped.
+That is tolerable here: each run fetches the current *and* next week, so the
+committed file carries about a week of runway, and the board keeps its last good
+render regardless. Two consecutive misses trip the `STALE_HOURS` footer warning,
+which is the signal worth acting on.
+
+One caveat: GitHub disables scheduled workflows after 60 days of repository
+inactivity, emailing the owner. Re-enable from the Actions tab. If the built-in
+cron ever proves too unreliable, `workflow_dispatch` is still enabled, so an
+external scheduler (cron-job.org and the like) can POST to the workflow's
+`dispatches` endpoint instead with no change to the workflow.
 
 ## Setup
 
 1. Enable GitHub Pages for this repo on `main` (Settings -> Pages -> Deploy from
    branch -> `main` / root). The board and its JSON are then served from the
    same origin, which is what the relative fetch in `index.html` expects.
-2. Point cron-job.org at the `collect.yml` workflow-dispatch endpoint on a daily
-   04:30 America/Detroit schedule.
+2. Nothing to configure for scheduling -- `collect.yml` carries its own daily
+   `schedule:`. Dispatch it once by hand from the Actions tab first, to confirm
+   the fetch, the commit and the Pages redeploy all work end to end.
 3. Add the board URLs above as DakBoard blocks.
