@@ -1,13 +1,26 @@
 name: collect
 
 on:
-  # Fired by cron-job.org at 04:30 America/Detroit. GitHub's built-in schedule:
-  # cron is unreliable for anything time-sensitive -- runs are queued on a
-  # best-effort basis and are routinely late or skipped -- so the schedule below
-  # is kept only as documentation of intent.
-  #
-  # schedule:
-  #   - cron: '30 8 * * *'   # 04:30 America/Detroit (EDT) / 03:30 (EST)
+  schedule:
+    # 08:30 UTC = 04:30 America/Detroit (EDT) / 03:30 (EST). Both land well
+    # before the school day, so the DST drift needs no handling.
+    #
+    # The :30 offset is deliberate. GitHub queues scheduled runs best-effort and
+    # the top of the hour is the most contended slot, so ':00' is the one time
+    # most likely to be delayed.
+    #
+    # A late or skipped run is close to harmless here: each run fetches the
+    # current AND next week, so the committed file already holds about a week of
+    # runway, and the board keeps its last good render either way. Two
+    # consecutive misses trip the STALE_HOURS warning in the footer, which is
+    # the signal worth acting on.
+    #
+    # Caveat: GitHub disables scheduled workflows after 60 days of repository
+    # inactivity and emails the owner. Re-enable from the Actions tab.
+    - cron: '30 8 * * *'
+
+  # Kept so the collector can still be fired by hand, and so an external
+  # scheduler can drive it if the built-in cron ever proves too unreliable.
   workflow_dispatch:
 
 permissions:
