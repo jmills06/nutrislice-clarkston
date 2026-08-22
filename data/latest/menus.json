@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-20T19:30:31Z",
+  "generated_utc": "2026-08-22T08:57:44Z",
   "district": "clarkston",
   "schools": {
     "springfield-plains": {
@@ -221,40 +221,63 @@
       "label": "Sashabaw Middle",
       "days": {
         "2026-08-24": {
-          "lunch": {
+          "breakfast": {
             "entrees": [
-              "Chili Dog",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Spicy Chicken Sandwich",
-              "Chicken Nuggets",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks"
+              "English Muffin with Egg & Cheese",
+              "Hash Brown Patty",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
             ],
             "sides": [
-              "Edamame",
-              "Whole Grain Dinner Roll",
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
-              "Fresh Carrots",
-              "Sliced Cucumbers",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "French Fries",
-              "Boston Baked Beans"
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
             ],
             "staples": [
-              "Honey Buffalo Sauce",
-              "Marinara Sauce",
+              "Cinnamon Goldfish Graham Crackers",
               "Low Fat Milk",
               "Chocolate Low Fat Milk"
             ]
           }
         },
         "2026-08-25": {
+          "breakfast": {
+            "entrees": [
+              "Sausage, Egg & Cheese on Croissant",
+              "Tater Tots",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Wango Mango Juice",
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
           "lunch": {
             "entrees": [
               "Beef Nachos",
@@ -289,6 +312,34 @@
           }
         },
         "2026-08-26": {
+          "breakfast": {
+            "entrees": [
+              "Hash Brown Patty",
+              "Pork Sausage Patty",
+              "Whole Grain French Toast Sticks",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
           "lunch": {
             "entrees": [
               "Boneless Chicken Wings",
@@ -327,6 +378,34 @@
           }
         },
         "2026-08-27": {
+          "breakfast": {
+            "entrees": [
+              "Cheddar Cheese Omelet",
+              "Tater Tots",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Wango Mango Juice",
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
           "lunch": {
             "entrees": [
               "Macaroni and Cheese",
@@ -361,6 +440,33 @@
           }
         },
         "2026-08-28": {
+          "breakfast": {
+            "entrees": [
+              "Buttermilk Pancakes",
+              "Hash Brown Patty",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ]
+          },
           "lunch": {
             "entrees": [
               "Buttermilk Pancakes",
