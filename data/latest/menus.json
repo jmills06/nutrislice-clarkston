@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-24T09:23:43Z",
+  "generated_utc": "2026-08-25T09:09:10Z",
   "district": "clarkston",
   "schools": {
     "springfield-plains": {
@@ -140,7 +140,8 @@
             "sides": [
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
-              "Co-Jack Cheese"
+              "Co-Jack Cheese",
+              "Chilled Peaches"
             ],
             "staples": [
               "Low Fat Milk",
@@ -159,6 +160,9 @@
               "Whole Grain Dinner Roll",
               "Seasoned Black Beans",
               "Seasoned Corn",
+              "Chilled Peaches",
+              "Peach Cup",
+              "Peachy Summer Salad",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
               "Fresh Carrots",
@@ -368,6 +372,7 @@
               "Mixed Greens Salad with Cheese",
               "Whole Grain Dinner Roll",
               "Edamame",
+              "Cumin Cauliflower",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
               "Fresh Carrots",
@@ -378,49 +383,6 @@
             ],
             "staples": [
               "Marinara Sauce",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ]
-          }
-        },
-        "2026-09-04": {
-          "breakfast": {
-            "entrees": [
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Whole Grain Blueberry Muffin"
-            ],
-            "sides": [
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Low Fat Mozzarella String Cheese"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Whole Grain French Toast Sticks",
-              "Ham & American Cheese Sandwich"
-            ],
-            "sides": [
-              "Turkey Bacon",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
-              "Hash Brown Patty",
-              "Strawberry Yogurt",
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Fresh Carrots",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Sliced Cucumbers",
-              "Margarine"
-            ],
-            "staples": [
               "Low Fat Milk",
               "Chocolate Low Fat Milk"
             ]
@@ -608,7 +570,8 @@
               "Assorted Chilled Fruit",
               "Low Fat Mozzarella String Cheese",
               "Co-Jack Cheese",
-              "Strawberry Yogurt"
+              "Strawberry Yogurt",
+              "Chilled Peaches"
             ],
             "staples": [
               "Wango Mango Juice",
@@ -640,7 +603,8 @@
               "Fresh Cherry Tomatoes",
               "Red and Green Bell Pepper Strips",
               "Spinach & Romaine Salad",
-              "Curly Fries"
+              "Curly Fries",
+              "Chilled Peaches"
             ],
             "staples": [
               "Honey Buffalo Sauce",
@@ -763,7 +727,8 @@
               "Red and Green Bell Pepper Strips",
               "Spinach & Romaine Salad",
               "French Fries",
-              "Boston Baked Beans"
+              "Boston Baked Beans",
+              "Smart Snacking - Spiced Trail Mix"
             ],
             "staples": [
               "Honey Buffalo Sauce",
@@ -941,65 +906,6 @@
               "Red and Green Bell Pepper Strips",
               "Spinach & Romaine Salad",
               "Curly Fries"
-            ],
-            "staples": [
-              "Honey Buffalo Sauce",
-              "Marinara Sauce",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ]
-          }
-        },
-        "2026-09-04": {
-          "breakfast": {
-            "entrees": [
-              "Ham, Egg & Cheese on English Muffin",
-              "Whole Grain Blueberry Muffin",
-              "WG Banana Muffin",
-              "WG Chocolate Chocolate Chip Muffin",
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Banana Chocolate Chunk BeneFIT Bar",
-              "Frosted Cinnamon Pop-Tart",
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Mini Cinnis",
-              "Frosted Strawberry Pop-Tart"
-            ],
-            "sides": [
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Low Fat Mozzarella String Cheese",
-              "Co-Jack Cheese",
-              "Strawberry Yogurt"
-            ],
-            "staples": [
-              "Cinnamon Goldfish Graham Crackers",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Whole Grain French Toast Sticks",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks"
-            ],
-            "sides": [
-              "Hash Brown Patty",
-              "Pork Sausage Patty",
-              "Apple Cinnamon Slices",
-              "Whole Grain Dinner Roll",
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Fresh Carrots",
-              "Sliced Cucumbers",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "French Fries"
             ],
             "staples": [
               "Honey Buffalo Sauce",
