@@ -125,12 +125,18 @@ def classify(food, name, station):
 
 
 def parse_day(day, use_fallback, stations_seen=None):
-    """Turn one day's menu_items[] into {entrees, sides, staples}.
+    """Turn one day's menu_items[] into {entrees, sides, staples, stations}.
 
     Items are walked in `position` order so the board shows dishes the way the
     kitchen listed them. Section-title rows carry no food and exist only to
-    group what follows, which the fallback path uses when food_category is
-    missing.
+    group what follows.
+
+    Stations are kept as well as the flat buckets. The kitchen's own grouping
+    carries real meaning that a flat entree list throws away -- Sashabaw serves
+    "Grill", "2Mato" and "Create" rather than an undifferentiated pile of
+    entrees -- and it is the only way the board can label what it shows. The
+    flat buckets stay because the week strip and the staples line want a simple
+    answer to "what is the headline dish" without walking the grouping.
     """
     items = sorted(
         day.get("menu_items") or [],
@@ -138,6 +144,8 @@ def parse_day(day, use_fallback, stations_seen=None):
     )
 
     buckets = {"entree": [], "side": [], "staple": []}
+    stations = []          # ordered, one entry per station that holds real food
+    by_station = {}
     seen = set()
     section_count = 0
     station = ""
@@ -177,10 +185,24 @@ def parse_day(day, use_fallback, stations_seen=None):
 
         buckets[bucket].append(name)
 
+        # Staples are deliberately left out of the station list: a "Grill"
+        # station reads better without its dipping sauce, and milk belongs on
+        # the staples line rather than in a station of its own.
+        if bucket != "staple" and station:
+            if station not in by_station:
+                by_station[station] = {
+                    "name": station,
+                    "kind": "side" if SIDE_STATION_RE.search(station) else "entree",
+                    "items": [],
+                }
+                stations.append(by_station[station])
+            by_station[station]["items"].append(name)
+
     return {
         "entrees": buckets["entree"],
         "sides": buckets["side"],
         "staples": buckets["staple"],
+        "stations": stations,
     }
 
 
