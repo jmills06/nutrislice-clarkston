@@ -28,6 +28,7 @@ index.html?view=sashabaw-middle       Sashabaw Middle alone
 ```
 
 Extra query parameters, all optional: `?breakfast=0` hides the breakfast block,
+`?stations=0` falls back to a flat entree list,
 `?autofit=1` scales the fixed canvas to the window for desk testing, and
 `?date=YYYY-MM-DD` simulates a calendar day (real clock time is kept) so the
 weekend and roll-forward states can be checked without waiting for a weekend.
@@ -47,8 +48,15 @@ get hero treatment.
 
 `collect.py` has its own constants near the top: the API host, the school and
 menu-type slugs, the noise pattern that routes milk and condiments to the
-staples line, and the station pattern that keeps salad-bar components out of the
-entree bucket.
+staples line, the accompaniment list that catches items like `Cream Cheese` that
+the district tags as entrees, and the station pattern that keeps salad-bar
+components out of the entree bucket.
+
+Lunch entrees are grouped under the kitchen's own station names -- `Create`,
+`Grill`, `2Mato` at Sashabaw; `Main Entrees` and `Alternate Entrees` at
+Springfield. Hero slots are handed out breadth-first, so every station shows its
+first item before any station shows a second and no station is pushed off the
+board. Set `SHOW_STATIONS = false` (or `?stations=0`) for a flat entree list.
 
 ## Collector
 
