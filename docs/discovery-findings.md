@@ -14,9 +14,12 @@ MENU TYPES  breakfast, lunch
 ```
 
 `GET /menu/api/schools/?format=json` returns 12 schools, each with an inline
-`menu_types[]` carrying `slug` + `name`. `springfield-plains` advertises
-`breakfast` and `lunch`; `sashabaw-middle` advertises only `lunch`, though its
-`breakfast` week endpoint also returns HTTP 200 (with no content -- see below).
+`menu_types[]` carrying `slug` + `name`. Both target schools serve
+`breakfast` and `lunch`. Note that the advertised `menu_types[]` is not a
+reliable guide to what is actually published: on 2026-08-20 `sashabaw-middle`
+listed only `lunch` and its breakfast weeks were empty, and by 2026-08-25 it was
+publishing full breakfast menus. Treat an empty meal as "not published yet",
+never as "this school does not serve it".
 
 Ruled out, all HTTP 404: `elementary-lunch`, `elementary-breakfast`, `ms-lunch`,
 `ms-breakfast`, `middle-school-*`, `secondary-*`, `k-5-*`, `6-8-*`, every
@@ -38,7 +41,18 @@ Root holds `days[]` plus `bold_all_entrees_enabled`. Each day is
 * **Holiday marker** -- `is_holiday: true`, `bold: true`, `text: "No School"`,
   `food: null`.
 
-Station names observed: `Main Entrees`, `Alternate Entrees`, `Salad`.
+Station names observed (2026-08-25, both weeks):
+
+| School | Meal | Stations |
+|---|---|---|
+| springfield-plains | breakfast | Main Entrees, Alternate Entrees, Sides for All Meals |
+| springfield-plains | lunch | Main Entrees, Alternate Entrees, Salad, Fruit & Vegetable Bar, Sides for All Meals, Milk & Condiments |
+| sashabaw-middle | breakfast | Breakfast, Alternate Entrees, Sides for All Meals |
+| sashabaw-middle | lunch | Create, Grill, 2Mato, Fruit & Vegetable Bar |
+
+`SIDE_STATION_RE` in `collect.py` decides which of these are hero stations; the
+collector logs the full station vocabulary on every run so the pattern can be
+retuned if the district renames one.
 
 ## Publication window
 
@@ -78,8 +92,18 @@ made an empty result look like a permanent one.
   `Dinner Roll` and `Mixed Greens Salad with Cheese` in the entree bucket, which
   would have headlined "Croutons" on the board. `collect.py` consults the
   station header and demotes anything under a salad/fruit/side station.
-* `sashabaw-middle` publishes no breakfast menu. The board omits the breakfast
-  block for a school rather than rendering a permanently empty section.
+* A school can publish lunch without breakfast, and that changes between terms
+  (`sashabaw-middle` had no breakfast on 2026-08-20 and full breakfast menus by
+  2026-08-25). The board omits an absent meal rather than rendering a
+  permanently empty section, so either state renders correctly.
+* Station names are preserved in `menus.json`. The kitchen's own grouping is
+  more meaningful than a flat entree list -- Sashabaw serves `Create`, `Grill`
+  and `2Mato`, Springfield `Main Entrees` and `Alternate Entrees` -- and it is
+  what the board labels its hero lines with.
+* Some accompaniments are tagged `food_category: "entree"` and filed under an
+  entree station, so neither the noise pattern nor the station check catches
+  them: `Cream Cheese` beside the bagel, `Sour Cream` beside the pierogies.
+  These are matched by whole name and routed to the staples line.
 * Holiday markers carry no food, so those days end up empty and are omitted from
   `menus.json`. The board renders a missing day as NO SCHOOL, which is the same
   outcome.

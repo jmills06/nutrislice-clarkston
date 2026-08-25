@@ -418,6 +418,7 @@
 
       var box = el('div', 'entrees');
       var overflow = [];
+      var heroShown = {};   // names already on screen at hero size
 
       if (SHOW_STATIONS && entreeStations.length) {
         // Allocate breadth-first: every station gets its first item before any
@@ -439,7 +440,10 @@
           if (!taken[i].length) return;
           var group = el('div', 'station');
           group.appendChild(el('div', 'station-name', st.name));
-          taken[i].forEach(function (n) { group.appendChild(el('div', 'entree', n)); });
+          taken[i].forEach(function (n) {
+            heroShown[n] = true;
+            group.appendChild(el('div', 'entree', n));
+          });
           box.appendChild(group);
         });
       } else {
@@ -447,21 +451,34 @@
         // Entrees beyond the hero cap are not dropped -- they join the chip row,
         // which keeps the panel height fixed while still listing everything.
         overflow = entrees.slice(cap);
-        hero.forEach(function (name) { box.appendChild(el('div', 'entree', name)); });
+        hero.forEach(function (name) {
+          heroShown[name] = true;
+          box.appendChild(el('div', 'entree', name));
+        });
       }
 
       if (!box.childNodes.length) box.appendChild(el('div', 'empty-meal', 'No entrees listed'));
       wrap.appendChild(box);
 
+      // A station can hold items the collector bucketed as sides -- Create's
+      // rice and beans are part of that station's offer -- so the same name can
+      // arrive from both the station overflow and the sides list. Show each
+      // name once, and never as a chip if it is already a hero line.
       var chips = el('div', 'chips');
+      var chipSeen = {};
       overflow.concat(sides).forEach(function (name) {
+        if (heroShown[name] || chipSeen[name]) return;
+        chipSeen[name] = true;
         chips.appendChild(el('div', 'chip', name));
       });
       wrap.appendChild(chips);
     } else {
       // Breakfast is compact: one dense chip row, no hero sizing.
       var bchips = el('div', 'chips');
+      var bSeen = {};
       entrees.concat(sides).forEach(function (name) {
+        if (bSeen[name]) return;
+        bSeen[name] = true;
         bchips.appendChild(el('div', 'chip', name));
       });
       if (!entrees.length && !sides.length) {
