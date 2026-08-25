@@ -117,6 +117,15 @@
   .meal.breakfast { flex: 0 0 auto; margin-top: 20px; }
 
   .entrees { flex: 0 0 auto; margin-bottom: 14px; }
+  .station { margin-bottom: 11px; }
+  .station:last-child { margin-bottom: 0; }
+  .station-name {
+    font-family: 'Oswald', sans-serif; font-weight: 500;
+    font-size: 15px; letter-spacing: 3.5px; text-transform: uppercase;
+    color: rgba(255,112,48,0.85); margin-bottom: 1px;
+  }
+  .solo .station-name { font-size: 19px; letter-spacing: 4px; margin-bottom: 3px; }
+  .solo .station { margin-bottom: 16px; }
   .entree {
     font-family: 'Oswald', sans-serif; font-weight: 500;
     font-size: 43px; line-height: 1.18; letter-spacing: 0.3px;
@@ -233,6 +242,10 @@
   var STALE_HOURS     = 30;       // older than this flags the footer
   var MAX_ENTREES     = 3;        // hero lines per meal before overflow collapses to chips
   var SOLO_MAX_ENTREES = 6;       // ...and when a single school owns the canvas
+  var SHOW_STATIONS    = true;    // group lunch entrees under the kitchen's own
+                                  // station names (Grill, 2Mato, Create...)
+  var PER_STATION      = 2;       // hero items shown per station
+  var SOLO_PER_STATION = 4;       // ...when a single school owns the canvas
   var AUTO_FIT        = false;    // scale 1080x1920 canvas to window, dev only
 
   var DATA_URL = 'data/latest/menus.json';
@@ -243,6 +256,8 @@
   var qs = new URLSearchParams(window.location.search);
   var viewParam = qs.get('view');
   if (viewParam && (viewParam === 'both' || SCHOOLS[viewParam])) VIEW = viewParam;
+  if (qs.get('stations') === '0') SHOW_STATIONS = false;
+  if (qs.get('stations') === '1') SHOW_STATIONS = true;
   if (qs.get('breakfast') === '0') SHOW_BREAKFAST = false;
   if (qs.get('breakfast') === '1') SHOW_BREAKFAST = true;
   if (qs.get('autofit') === '1') AUTO_FIT = true;
@@ -392,14 +407,50 @@
 
     if (kind === 'lunch') {
       var cap = isSolo() ? SOLO_MAX_ENTREES : MAX_ENTREES;
-      var hero = entrees.slice(0, cap);
-      // Entrees beyond the hero cap are not dropped -- they join the chip row,
-      // which keeps the panel height fixed while still listing everything.
-      var overflow = entrees.slice(cap);
+      var perStation = isSolo() ? SOLO_PER_STATION : PER_STATION;
+
+      // The kitchen's own grouping says more than a flat list -- "Grill" and
+      // "2Mato" are how the students actually read the line. Fall back to the
+      // flat entree list when a payload predates stations or has none.
+      var entreeStations = (bucket.stations || []).filter(function (st) {
+        return st.kind === 'entree' && st.items && st.items.length;
+      });
 
       var box = el('div', 'entrees');
-      hero.forEach(function (name) { box.appendChild(el('div', 'entree', name)); });
-      if (!hero.length) box.appendChild(el('div', 'empty-meal', 'No entrees listed'));
+      var overflow = [];
+
+      if (SHOW_STATIONS && entreeStations.length) {
+        // Allocate breadth-first: every station gets its first item before any
+        // station gets a second. Filling stations in order would let a long
+        // Grill list eat the whole cap and drop 2Mato off the board entirely,
+        // when what the board is for is showing what is on offer today.
+        var taken = entreeStations.map(function () { return []; });
+        var shown = 0;
+        for (var round = 0; round < perStation && shown < cap; round++) {
+          for (var i = 0; i < entreeStations.length && shown < cap; i++) {
+            var items = entreeStations[i].items;
+            if (items.length > round) { taken[i].push(items[round]); shown++; }
+          }
+        }
+        entreeStations.forEach(function (st, i) {
+          st.items.forEach(function (name) {
+            if (taken[i].indexOf(name) === -1) overflow.push(name);
+          });
+          if (!taken[i].length) return;
+          var group = el('div', 'station');
+          group.appendChild(el('div', 'station-name', st.name));
+          taken[i].forEach(function (n) { group.appendChild(el('div', 'entree', n)); });
+          box.appendChild(group);
+        });
+      } else {
+        var hero = entrees.slice(0, cap);
+        // Entrees beyond the hero cap are not dropped -- they join the chip row,
+        // which keeps the panel height fixed while still listing everything.
+        overflow = entrees.slice(cap);
+        hero.forEach(function (name) { box.appendChild(el('div', 'entree', name)); });
+      }
+
+      if (!box.childNodes.length) box.appendChild(el('div', 'empty-meal', 'No entrees listed'));
       wrap.appendChild(box);
 
       var chips = el('div', 'chips');
@@ -436,8 +487,9 @@
     panel.appendChild(renderMeal(lunch, 'lunch', 'Lunch'));
 
     var breakfast = iso ? mealOf(key, iso, 'breakfast') : null;
-    // Sashabaw Middle publishes no breakfast menu at all, so the block is
-    // omitted rather than rendered as a permanently empty section.
+    // A school may publish lunch but not breakfast, and that can change between
+    // terms, so the block is omitted when the meal is absent rather than
+    // rendered as an empty section.
     if (SHOW_BREAKFAST && breakfast) {
       panel.appendChild(renderMeal(breakfast, 'breakfast', 'Breakfast'));
     }
@@ -530,7 +582,7 @@
   // layout on a device that shows the same pixels for hours at a time.
   function signatureOf(pick) {
     var parts = [pick.iso || 'none', VIEW, isSolo() ? 'solo' : 'duo',
-                 SHOW_BREAKFAST ? 'b1' : 'b0',
+                 SHOW_BREAKFAST ? 'b1' : 'b0', SHOW_STATIONS ? 'st1' : 'st0',
                  fetchFailed ? 'f1' : 'f0', data ? data.generated_utc : 'nodata'];
     var anchor = parseLocalDate(pick.iso || pick.todayIso);
     var monday = addDays(anchor, -((anchor.getDay() + 6) % 7));
@@ -538,7 +590,9 @@
       for (var i = 0; i < 5; i++) {
         var iso = isoOf(addDays(monday, i));
         var l = mealOf(k, iso, 'lunch');
-        parts.push(k + iso + (l && l.entrees ? l.entrees.join('|') : ''));
+        parts.push(k + iso + (l && l.entrees ? l.entrees.join('|') : '') +
+          (l && l.stations ? l.stations.map(function (x) {
+            return x.name + ':' + (x.items || []).join(','); }).join(';') : ''));
       }
       var bm = pick.iso ? mealOf(k, pick.iso, 'breakfast') : null;
       if (bm) parts.push(k + 'bk' + (bm.entrees || []).join('|') + (bm.sides || []).join('|'));

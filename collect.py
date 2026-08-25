@@ -75,6 +75,17 @@ SIDE_STATION_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Accompaniments the district tags as entrees and files under an entree station,
+# so neither the noise pattern nor SIDE_STATION_RE catches them: "Cream Cheese"
+# beside the bagel, "Sour Cream" beside the pierogies. Matched on the whole name,
+# never as a substring -- "Strawberry Cream Cheese Stuffed Bagel" is a real
+# entree and must not be demoted by sharing a word with one of these.
+ACCOMPANIMENT_RE = re.compile(
+    r"^(cream cheese|sour cream|margarine|butter|syrup|salsa|gravy"
+    r"|tartar sauce|honey mustard|cheese sauce)$",
+    re.IGNORECASE,
+)
+
 # Only used if food_category turns out to be missing across a whole payload.
 FALLBACK_ENTREES_PER_SECTION = 2
 
@@ -116,6 +127,8 @@ def classify(food, name, station):
     or fruit station is demoted to a side no matter how it is categorized, which
     keeps croutons off the board as a headline entree.
     """
+    if ACCOMPANIMENT_RE.match(name.strip()):
+        return "staple"
     if (food.get("food_category") or "").strip().lower() == "entree":
         if not (station and SIDE_STATION_RE.search(station)):
             return "entree"
