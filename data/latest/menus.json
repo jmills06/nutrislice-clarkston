@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-24T13:42:31Z",
+  "generated_utc": "2026-09-25T14:04:36Z",
   "district": "clarkston",
   "schools": {
     "springfield-plains": {
@@ -510,7 +510,6 @@
               "Croutons",
               "Dinner Roll",
               "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
               "Tater Tots",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
@@ -546,8 +545,7 @@
                 "items": [
                   "Croutons",
                   "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
+                  "Mixed Greens Salad with Cheese"
                 ]
               },
               {
@@ -622,7 +620,6 @@
               "Dinner Roll",
               "Croutons",
               "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
               "Roasted Broccoli",
               "Strawberry Mango Frozen SideKicks",
               "Assorted Chilled Fruit",
@@ -658,8 +655,7 @@
                 "kind": "side",
                 "items": [
                   "Croutons",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
+                  "Mixed Greens Salad with Cheese"
                 ]
               },
               {
@@ -736,7 +732,6 @@
               "Croutons",
               "Dinner Roll",
               "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
               "Fresh Carrots",
@@ -771,8 +766,7 @@
                 "items": [
                   "Croutons",
                   "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
+                  "Mixed Greens Salad with Cheese"
                 ]
               },
               {
@@ -840,7 +834,6 @@
               "Croutons",
               "Dinner Roll",
               "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
               "Shredded Romaine Lettuce",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
@@ -875,8 +868,7 @@
                 "items": [
                   "Croutons",
                   "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
+                  "Mixed Greens Salad with Cheese"
                 ]
               },
               {
@@ -952,7 +944,6 @@
               "Croutons",
               "Dinner Roll",
               "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
               "Seasoned Black Beans",
               "Seasoned Corn",
               "Homemade Pickles",
@@ -991,8 +982,7 @@
                 "items": [
                   "Croutons",
                   "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
+                  "Mixed Greens Salad with Cheese"
                 ]
               },
               {
@@ -1071,7 +1061,6 @@
               "Croutons",
               "Dinner Roll",
               "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
               "Strawberry Yogurt",
               "Assorted Chilled Fruit",
               "Fresh Whole Fruit",
@@ -1109,8 +1098,7 @@
                 "items": [
                   "Croutons",
                   "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
+                  "Mixed Greens Salad with Cheese"
                 ]
               },
               {
@@ -1778,7 +1766,7 @@
               "Hash Brown Patty",
               "Pork Sausage Patty",
               "Co-Jack Cheese",
-              "Whole Grain Dinner Roll",
+              "Dinner Roll",
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
               "Fresh Carrots",
@@ -1812,7 +1800,7 @@
                   "Classic Hamburger",
                   "Classic American Cheeseburger",
                   "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
+                  "Dinner Roll"
                 ]
               },
               {
@@ -2060,7 +2048,7 @@
             "sides": [
               "Brown Rice",
               "Refried Vegetarian Beans",
-              "Whole Grain Dinner Roll",
+              "Dinner Roll",
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
               "Fresh Carrots",
@@ -2093,7 +2081,7 @@
                   "Classic Hamburger",
                   "Classic American Cheeseburger",
                   "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
+                  "Dinner Roll"
                 ]
               },
               {
@@ -2200,7 +2188,7 @@
               "Macaroni and Cheese",
               "Roasted Broccoli",
               "Strawberry Mango Frozen SideKicks",
-              "Whole Grain Dinner Roll",
+              "Dinner Roll",
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
               "Fresh Carrots",
@@ -2235,7 +2223,7 @@
                   "Classic Hamburger",
                   "Classic American Cheeseburger",
                   "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
+                  "Dinner Roll"
                 ]
               },
               {
@@ -2343,7 +2331,7 @@
             "sides": [
               "Brussel Sprouts \"Cacio e Pepe\"",
               "Breadstick",
-              "Whole Grain Dinner Roll",
+              "Dinner Roll",
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
               "Fresh Carrots",
@@ -2376,7 +2364,7 @@
                   "Classic Hamburger",
                   "Classic American Cheeseburger",
                   "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
+                  "Dinner Roll"
                 ]
               },
               {
@@ -2483,7 +2471,7 @@
               "Yakisoba Noodles",
               "Mexican Style Refried Beans",
               "WG Rice Krispies Treat",
-              "Whole Grain Dinner Roll",
+              "Dinner Roll",
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
               "Fresh Carrots",
@@ -2517,7 +2505,7 @@
                   "Classic Hamburger",
                   "Classic American Cheeseburger",
                   "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
+                  "Dinner Roll"
                 ]
               },
               {
