@@ -1,575 +1,10 @@
 {
-  "generated_utc": "2026-09-27T14:12:39Z",
+  "generated_utc": "2026-09-28T16:55:29Z",
   "district": "clarkston",
   "schools": {
     "springfield-plains": {
       "label": "Springfield Plains",
       "days": {
-        "2026-09-21": {
-          "breakfast": {
-            "entrees": [
-              "Apple Frudel",
-              "WG Chocolate Chocolate Chip Muffin"
-            ],
-            "sides": [
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Low Fat Mozzarella String Cheese"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Apple Frudel"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "WG Chocolate Chocolate Chip Muffin"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Low Fat Mozzarella String Cheese"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Chicken Parmesan",
-              "Whole Grain Hamburger Bun",
-              "Turkey and Cheese Sandwich"
-            ],
-            "sides": [
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
-              "French Fries",
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Fresh Carrots",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Sliced Cucumbers"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk",
-              "Margarine"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Chicken Parmesan",
-                  "Whole Grain Hamburger Bun"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Turkey and Cheese Sandwich"
-                ]
-              },
-              {
-                "name": "Salad",
-                "kind": "side",
-                "items": [
-                  "Croutons",
-                  "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "French Fries"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Fresh Carrots",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Sliced Cucumbers"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-22": {
-          "breakfast": {
-            "entrees": [
-              "Cherry Frudel",
-              "Banana Chocolate Chunk BeneFIT Bar"
-            ],
-            "sides": [
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Co-Jack Cheese"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Cherry Frudel"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Banana Chocolate Chunk BeneFIT Bar"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Co-Jack Cheese"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Chicken Swedish Meatballs",
-              "Cheese Stuffed Shells"
-            ],
-            "sides": [
-              "Mashed Potatoes",
-              "Dinner Roll",
-              "Croutons",
-              "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
-              "Edamame",
-              "Seasoned Corn",
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Fresh Carrots",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Sliced Cucumbers"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk",
-              "Margarine"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Chicken Swedish Meatballs",
-                  "Mashed Potatoes",
-                  "Dinner Roll"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Cheese Stuffed Shells"
-                ]
-              },
-              {
-                "name": "Salad",
-                "kind": "side",
-                "items": [
-                  "Croutons",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Edamame",
-                  "Seasoned Corn"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Fresh Carrots",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Sliced Cucumbers"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-23": {
-          "breakfast": {
-            "entrees": [
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Whole Grain Apple Cinnamon Muffin"
-            ],
-            "sides": [
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Low Fat Mozzarella String Cheese"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Strawberry Cream Cheese Stuffed Bagel"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Whole Grain Apple Cinnamon Muffin"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Low Fat Mozzarella String Cheese"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Little Caesar's Cheese Pizza",
-              "EZ Jammer Wowbutter & Jelly Sandwich"
-            ],
-            "sides": [
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
-              "Shredded Romaine Lettuce",
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Fresh Carrots",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Sliced Cucumbers"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk",
-              "Margarine"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Little Caesar's Cheese Pizza"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "EZ Jammer Wowbutter & Jelly Sandwich"
-                ]
-              },
-              {
-                "name": "Salad",
-                "kind": "side",
-                "items": [
-                  "Croutons",
-                  "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Shredded Romaine Lettuce"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Fresh Carrots",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Sliced Cucumbers"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-24": {
-          "breakfast": {
-            "entrees": [
-              "Mini Cinnis",
-              "WG Banana Muffin"
-            ],
-            "sides": [
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Co-Jack Cheese"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Mini Cinnis"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "WG Banana Muffin"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Co-Jack Cheese"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Chicken & Vegetable Dumplings",
-              "Orange Sauce",
-              "English Muffin with Egg & Cheese"
-            ],
-            "sides": [
-              "Vegetable Fried Rice",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese",
-              "Whole Grain Dinner Roll",
-              "Cumin Cauliflower",
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Fresh Carrots",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Sliced Cucumbers"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk",
-              "Margarine"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Chicken & Vegetable Dumplings",
-                  "Orange Sauce",
-                  "Vegetable Fried Rice"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "English Muffin with Egg & Cheese"
-                ]
-              },
-              {
-                "name": "Salad",
-                "kind": "side",
-                "items": [
-                  "Croutons",
-                  "Dinner Roll",
-                  "Mixed Greens Salad with Cheese",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Cumin Cauliflower"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Fresh Carrots",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Sliced Cucumbers"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-25": {
-          "breakfast": {
-            "entrees": [
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Whole Grain Blueberry Muffin"
-            ],
-            "sides": [
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Low Fat Mozzarella String Cheese"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Oatmeal Chocolate Chip BeneFIT Bar"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Whole Grain Blueberry Muffin"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Low Fat Mozzarella String Cheese"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Whole Grain French Toast Sticks",
-              "Pizza Bagel Fun Lunch"
-            ],
-            "sides": [
-              "Pork Sausage Patty",
-              "Croutons",
-              "Dinner Roll",
-              "Mixed Greens Salad with Cheese",
-              "Tater Tots",
-              "Assorted Chilled Fruit",
-              "Fresh Whole Fruit",
-              "Fresh Carrots",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Sliced Cucumbers"
-            ],
-            "staples": [
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk",
-              "Margarine"
-            ],
-            "stations": [
-              {
-                "name": "Main Entrees",
-                "kind": "entree",
-                "items": [
-                  "Whole Grain French Toast Sticks",
-                  "Pork Sausage Patty"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Pizza Bagel Fun Lunch"
-                ]
-              },
-              {
-                "name": "Salad",
-                "kind": "side",
-                "items": [
-                  "Croutons",
-                  "Dinner Roll",
-                  "Mixed Greens Salad with Cheese"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Tater Tots"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Assorted Chilled Fruit",
-                  "Fresh Whole Fruit",
-                  "Fresh Carrots",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Sliced Cucumbers"
-                ]
-              }
-            ]
-          }
-        },
         "2026-09-28": {
           "breakfast": {
             "entrees": [
@@ -1122,61 +557,35 @@
               }
             ]
           }
-        }
-      }
-    },
-    "sashabaw-middle": {
-      "label": "Sashabaw Middle",
-      "days": {
-        "2026-09-21": {
+        },
+        "2026-10-05": {
           "breakfast": {
             "entrees": [
-              "Pancake Breakfast Sandwich",
-              "Tater Tots",
-              "Whole Grain Blueberry Muffin",
-              "WG Banana Muffin",
-              "WG Chocolate Chocolate Chip Muffin",
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Banana Chocolate Chunk BeneFIT Bar",
-              "Frosted Cinnamon Pop-Tart",
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Mini Cinnis",
-              "Frosted Strawberry Pop-Tart"
+              "Apple Frudel",
+              "WG Chocolate Chocolate Chip Muffin"
             ],
             "sides": [
               "Fresh Whole Fruit",
               "Assorted Chilled Fruit",
-              "Low Fat Mozzarella String Cheese",
-              "Co-Jack Cheese",
-              "Strawberry Yogurt"
+              "Low Fat Mozzarella String Cheese"
             ],
             "staples": [
-              "Cinnamon Goldfish Graham Crackers",
               "Low Fat Milk",
               "Chocolate Low Fat Milk"
             ],
             "stations": [
               {
-                "name": "Breakfast",
+                "name": "Main Entrees",
                 "kind": "entree",
                 "items": [
-                  "Pancake Breakfast Sandwich",
-                  "Tater Tots"
+                  "Apple Frudel"
                 ]
               },
               {
                 "name": "Alternate Entrees",
                 "kind": "entree",
                 "items": [
-                  "Whole Grain Blueberry Muffin",
-                  "WG Banana Muffin",
-                  "WG Chocolate Chocolate Chip Muffin",
-                  "Oatmeal Chocolate Chip BeneFIT Bar",
-                  "Banana Chocolate Chunk BeneFIT Bar",
-                  "Frosted Cinnamon Pop-Tart",
-                  "Strawberry Cream Cheese Stuffed Bagel",
-                  "Mini Cinnis",
-                  "Frosted Strawberry Pop-Tart"
+                  "WG Chocolate Chocolate Chip Muffin"
                 ]
               },
               {
@@ -1185,136 +594,103 @@
                 "items": [
                   "Fresh Whole Fruit",
                   "Assorted Chilled Fruit",
-                  "Low Fat Mozzarella String Cheese",
-                  "Co-Jack Cheese",
-                  "Strawberry Yogurt"
+                  "Low Fat Mozzarella String Cheese"
                 ]
               }
             ]
           },
           "lunch": {
             "entrees": [
-              "Sweet & Sour Chicken",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks"
+              "Cereal, Goldfish & Yogurt Fun Lunch",
+              "Classic American Cheeseburger"
             ],
             "sides": [
-              "Vegetable Fried Rice",
-              "Fortune Cookies",
-              "Whole Grain Dinner Roll",
-              "Fresh Whole Fruit",
+              "French Fries",
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
               "Fresh Carrots",
-              "Sliced Cucumbers",
               "Fresh Cherry Tomatoes",
               "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "Tater Tots"
+              "Sliced Cucumbers",
+              "Fresh Celery Sticks"
             ],
             "staples": [
-              "Honey Buffalo Sauce",
-              "Marinara Sauce",
               "Low Fat Milk",
-              "Chocolate Low Fat Milk"
+              "Chocolate Low Fat Milk",
+              "Margarine"
             ],
             "stations": [
               {
-                "name": "Create",
+                "name": "Main Entrees",
                 "kind": "entree",
                 "items": [
-                  "Sweet & Sour Chicken",
-                  "Vegetable Fried Rice",
-                  "Fortune Cookies"
-                ]
-              },
-              {
-                "name": "Grill",
-                "kind": "entree",
-                "items": [
-                  "Classic Hamburger",
-                  "Classic American Cheeseburger",
-                  "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "2Mato",
-                "kind": "entree",
-                "items": [
-                  "Classic Cheese Pizza",
-                  "Classic Pepperoni Pizza",
-                  "Cheese Stuffed Breadsticks"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Fresh Whole Fruit",
-                  "Assorted Chilled Fruit",
-                  "Fresh Carrots",
-                  "Sliced Cucumbers",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Spinach & Romaine Salad",
-                  "Tater Tots"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-22": {
-          "breakfast": {
-            "entrees": [
-              "Ham & Cheese Croissant",
-              "Whole Grain Blueberry Muffin",
-              "WG Banana Muffin",
-              "WG Chocolate Chocolate Chip Muffin",
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Banana Chocolate Chunk BeneFIT Bar",
-              "Frosted Cinnamon Pop-Tart",
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Mini Cinnis",
-              "Frosted Strawberry Pop-Tart"
-            ],
-            "sides": [
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Low Fat Mozzarella String Cheese",
-              "Co-Jack Cheese",
-              "Strawberry Yogurt"
-            ],
-            "staples": [
-              "Wango Mango Juice",
-              "Cinnamon Goldfish Graham Crackers",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Breakfast",
-                "kind": "entree",
-                "items": [
-                  "Ham & Cheese Croissant"
+                  "Cereal, Goldfish & Yogurt Fun Lunch"
                 ]
               },
               {
                 "name": "Alternate Entrees",
                 "kind": "entree",
                 "items": [
-                  "Whole Grain Blueberry Muffin",
-                  "WG Banana Muffin",
-                  "WG Chocolate Chocolate Chip Muffin",
-                  "Oatmeal Chocolate Chip BeneFIT Bar",
-                  "Banana Chocolate Chunk BeneFIT Bar",
-                  "Frosted Cinnamon Pop-Tart",
-                  "Strawberry Cream Cheese Stuffed Bagel",
-                  "Mini Cinnis",
-                  "Frosted Strawberry Pop-Tart"
+                  "Classic American Cheeseburger",
+                  "French Fries"
+                ]
+              },
+              {
+                "name": "Salad",
+                "kind": "side",
+                "items": [
+                  "Croutons",
+                  "Dinner Roll",
+                  "Mixed Greens Salad with Cheese"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Assorted Chilled Fruit",
+                  "Fresh Whole Fruit",
+                  "Fresh Carrots",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Sliced Cucumbers",
+                  "Fresh Celery Sticks"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-06": {
+          "breakfast": {
+            "entrees": [
+              "Cherry Frudel",
+              "Banana Chocolate Chunk BeneFIT Bar"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Co-Jack Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Main Entrees",
+                "kind": "entree",
+                "items": [
+                  "Cherry Frudel"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "Banana Chocolate Chunk BeneFIT Bar"
                 ]
               },
               {
@@ -1323,146 +699,7 @@
                 "items": [
                   "Fresh Whole Fruit",
                   "Assorted Chilled Fruit",
-                  "Low Fat Mozzarella String Cheese",
-                  "Co-Jack Cheese",
-                  "Strawberry Yogurt"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Beef Nachos",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks"
-            ],
-            "sides": [
-              "Seasoned Black Beans",
-              "Brown Rice",
-              "Whole Grain Dinner Roll",
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Fresh Carrots",
-              "Sliced Cucumbers",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "Crinkle Cut French Fries"
-            ],
-            "staples": [
-              "Honey Buffalo Sauce",
-              "Marinara Sauce",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Create",
-                "kind": "entree",
-                "items": [
-                  "Beef Nachos",
-                  "Seasoned Black Beans",
-                  "Brown Rice"
-                ]
-              },
-              {
-                "name": "Grill",
-                "kind": "entree",
-                "items": [
-                  "Classic Hamburger",
-                  "Classic American Cheeseburger",
-                  "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "2Mato",
-                "kind": "entree",
-                "items": [
-                  "Classic Cheese Pizza",
-                  "Classic Pepperoni Pizza",
-                  "Cheese Stuffed Breadsticks"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Fresh Whole Fruit",
-                  "Assorted Chilled Fruit",
-                  "Fresh Carrots",
-                  "Sliced Cucumbers",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Spinach & Romaine Salad",
-                  "Crinkle Cut French Fries"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-23": {
-          "breakfast": {
-            "entrees": [
-              "Turkey Bacon, Egg & Cheese Bagel",
-              "Whole Grain Blueberry Muffin",
-              "WG Banana Muffin",
-              "WG Chocolate Chocolate Chip Muffin",
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Banana Chocolate Chunk BeneFIT Bar",
-              "Frosted Cinnamon Pop-Tart",
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Mini Cinnis",
-              "Frosted Strawberry Pop-Tart"
-            ],
-            "sides": [
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Low Fat Mozzarella String Cheese",
-              "Co-Jack Cheese",
-              "Strawberry Yogurt"
-            ],
-            "staples": [
-              "Cinnamon Goldfish Graham Crackers",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Breakfast",
-                "kind": "entree",
-                "items": [
-                  "Turkey Bacon, Egg & Cheese Bagel"
-                ]
-              },
-              {
-                "name": "Alternate Entrees",
-                "kind": "entree",
-                "items": [
-                  "Whole Grain Blueberry Muffin",
-                  "WG Banana Muffin",
-                  "WG Chocolate Chocolate Chip Muffin",
-                  "Oatmeal Chocolate Chip BeneFIT Bar",
-                  "Banana Chocolate Chunk BeneFIT Bar",
-                  "Frosted Cinnamon Pop-Tart",
-                  "Strawberry Cream Cheese Stuffed Bagel",
-                  "Mini Cinnis",
-                  "Frosted Strawberry Pop-Tart"
-                ]
-              },
-              {
-                "name": "Sides for All Meals",
-                "kind": "side",
-                "items": [
-                  "Fresh Whole Fruit",
-                  "Assorted Chilled Fruit",
-                  "Low Fat Mozzarella String Cheese",
-                  "Co-Jack Cheese",
-                  "Strawberry Yogurt"
+                  "Co-Jack Cheese"
                 ]
               }
             ]
@@ -1470,132 +707,95 @@
           "lunch": {
             "entrees": [
               "Boneless Chicken Wings",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks"
+              "Macaroni and Cheese"
             ],
             "sides": [
-              "Macaroni and Cheese",
-              "Roasted Broccoli",
-              "Whole Grain Dinner Roll",
-              "Fresh Whole Fruit",
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
               "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
               "Fresh Carrots",
-              "Sliced Cucumbers",
               "Fresh Cherry Tomatoes",
               "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "Seasoned Potato Wedges",
-              "Boston Baked Beans"
+              "Sliced Cucumbers",
+              "Fresh Celery Sticks"
             ],
             "staples": [
-              "Buffalo Ranch Sauce",
-              "Dip'n Sauce",
               "Honey Buffalo Sauce",
               "BBQ Sauce",
-              "Light Ranch Dressing",
-              "Marinara Sauce",
               "Low Fat Milk",
-              "Chocolate Low Fat Milk"
+              "Chocolate Low Fat Milk",
+              "Margarine"
             ],
             "stations": [
               {
-                "name": "Create",
+                "name": "Main Entrees",
                 "kind": "entree",
                 "items": [
-                  "Boneless Chicken Wings",
-                  "Macaroni and Cheese",
-                  "Roasted Broccoli"
-                ]
-              },
-              {
-                "name": "Grill",
-                "kind": "entree",
-                "items": [
-                  "Classic Hamburger",
-                  "Classic American Cheeseburger",
-                  "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "2Mato",
-                "kind": "entree",
-                "items": [
-                  "Classic Cheese Pizza",
-                  "Classic Pepperoni Pizza",
-                  "Cheese Stuffed Breadsticks"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Fresh Whole Fruit",
-                  "Assorted Chilled Fruit",
-                  "Fresh Carrots",
-                  "Sliced Cucumbers",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Spinach & Romaine Salad",
-                  "Seasoned Potato Wedges",
-                  "Boston Baked Beans"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-24": {
-          "breakfast": {
-            "entrees": [
-              "Whole Grain French Toast Sticks",
-              "Whole Grain Blueberry Muffin",
-              "WG Banana Muffin",
-              "WG Chocolate Chocolate Chip Muffin",
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Banana Chocolate Chunk BeneFIT Bar",
-              "Frosted Cinnamon Pop-Tart",
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Mini Cinnis",
-              "Frosted Strawberry Pop-Tart"
-            ],
-            "sides": [
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Low Fat Mozzarella String Cheese",
-              "Co-Jack Cheese",
-              "Strawberry Yogurt"
-            ],
-            "staples": [
-              "Wango Mango Juice",
-              "Cinnamon Goldfish Graham Crackers",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Breakfast",
-                "kind": "entree",
-                "items": [
-                  "Whole Grain French Toast Sticks"
+                  "Boneless Chicken Wings"
                 ]
               },
               {
                 "name": "Alternate Entrees",
                 "kind": "entree",
                 "items": [
-                  "Whole Grain Blueberry Muffin",
-                  "WG Banana Muffin",
-                  "WG Chocolate Chocolate Chip Muffin",
-                  "Oatmeal Chocolate Chip BeneFIT Bar",
-                  "Banana Chocolate Chunk BeneFIT Bar",
-                  "Frosted Cinnamon Pop-Tart",
-                  "Strawberry Cream Cheese Stuffed Bagel",
-                  "Mini Cinnis",
-                  "Frosted Strawberry Pop-Tart"
+                  "Macaroni and Cheese"
+                ]
+              },
+              {
+                "name": "Salad",
+                "kind": "side",
+                "items": [
+                  "Croutons",
+                  "Dinner Roll",
+                  "Mixed Greens Salad with Cheese"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Assorted Chilled Fruit",
+                  "Fresh Whole Fruit",
+                  "Fresh Carrots",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Sliced Cucumbers",
+                  "Fresh Celery Sticks"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-07": {
+          "breakfast": {
+            "entrees": [
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Whole Grain Apple Cinnamon Muffin"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Main Entrees",
+                "kind": "entree",
+                "items": [
+                  "Strawberry Cream Cheese Stuffed Bagel"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "Whole Grain Apple Cinnamon Muffin"
                 ]
               },
               {
@@ -1604,139 +804,107 @@
                 "items": [
                   "Fresh Whole Fruit",
                   "Assorted Chilled Fruit",
-                  "Low Fat Mozzarella String Cheese",
-                  "Co-Jack Cheese",
-                  "Strawberry Yogurt"
+                  "Low Fat Mozzarella String Cheese"
                 ]
               }
             ]
           },
           "lunch": {
             "entrees": [
-              "Chicken Swedish Meatballs",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks",
-              "Meat Lover's Pizza"
+              "Little Caesar's Cheese Pizza",
+              "EZ Jammer Wowbutter & Jelly Sandwich"
             ],
             "sides": [
-              "Seasoned Homestyle Mashed Potatoes",
-              "Apple Cinnamon Slices",
+              "Croutons",
               "Dinner Roll",
-              "Whole Grain Dinner Roll",
-              "Fresh Whole Fruit",
+              "Mixed Greens Salad with Cheese",
+              "Shredded Romaine Lettuce",
               "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
               "Fresh Carrots",
-              "Sliced Cucumbers",
               "Fresh Cherry Tomatoes",
               "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "Seasoned Potato Wedges"
+              "Sliced Cucumbers"
             ],
             "staples": [
-              "Honey Buffalo Sauce",
-              "Marinara Sauce",
               "Low Fat Milk",
-              "Chocolate Low Fat Milk"
+              "Chocolate Low Fat Milk",
+              "Margarine"
             ],
             "stations": [
               {
-                "name": "Create",
+                "name": "Main Entrees",
                 "kind": "entree",
                 "items": [
-                  "Chicken Swedish Meatballs",
-                  "Seasoned Homestyle Mashed Potatoes",
-                  "Apple Cinnamon Slices",
-                  "Dinner Roll"
-                ]
-              },
-              {
-                "name": "Grill",
-                "kind": "entree",
-                "items": [
-                  "Classic Hamburger",
-                  "Classic American Cheeseburger",
-                  "Crispy Chicken Patty Sandwich",
-                  "Whole Grain Dinner Roll"
-                ]
-              },
-              {
-                "name": "2Mato",
-                "kind": "entree",
-                "items": [
-                  "Classic Cheese Pizza",
-                  "Classic Pepperoni Pizza",
-                  "Cheese Stuffed Breadsticks",
-                  "Meat Lover's Pizza"
-                ]
-              },
-              {
-                "name": "Fruit & Vegetable Bar",
-                "kind": "side",
-                "items": [
-                  "Fresh Whole Fruit",
-                  "Assorted Chilled Fruit",
-                  "Fresh Carrots",
-                  "Sliced Cucumbers",
-                  "Fresh Cherry Tomatoes",
-                  "Red and Green Bell Pepper Strips",
-                  "Spinach & Romaine Salad",
-                  "Seasoned Potato Wedges"
-                ]
-              }
-            ]
-          }
-        },
-        "2026-09-25": {
-          "breakfast": {
-            "entrees": [
-              "Ham, Egg & Cheese on English Muffin",
-              "Whole Grain Blueberry Muffin",
-              "WG Banana Muffin",
-              "WG Chocolate Chocolate Chip Muffin",
-              "Oatmeal Chocolate Chip BeneFIT Bar",
-              "Banana Chocolate Chunk BeneFIT Bar",
-              "Frosted Cinnamon Pop-Tart",
-              "Strawberry Cream Cheese Stuffed Bagel",
-              "Mini Cinnis",
-              "Frosted Strawberry Pop-Tart"
-            ],
-            "sides": [
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Low Fat Mozzarella String Cheese",
-              "Co-Jack Cheese",
-              "Strawberry Yogurt"
-            ],
-            "staples": [
-              "Cinnamon Goldfish Graham Crackers",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Breakfast",
-                "kind": "entree",
-                "items": [
-                  "Ham, Egg & Cheese on English Muffin"
+                  "Little Caesar's Cheese Pizza"
                 ]
               },
               {
                 "name": "Alternate Entrees",
                 "kind": "entree",
                 "items": [
-                  "Whole Grain Blueberry Muffin",
-                  "WG Banana Muffin",
-                  "WG Chocolate Chocolate Chip Muffin",
-                  "Oatmeal Chocolate Chip BeneFIT Bar",
-                  "Banana Chocolate Chunk BeneFIT Bar",
-                  "Frosted Cinnamon Pop-Tart",
-                  "Strawberry Cream Cheese Stuffed Bagel",
-                  "Mini Cinnis",
-                  "Frosted Strawberry Pop-Tart"
+                  "EZ Jammer Wowbutter & Jelly Sandwich"
+                ]
+              },
+              {
+                "name": "Salad",
+                "kind": "side",
+                "items": [
+                  "Croutons",
+                  "Dinner Roll",
+                  "Mixed Greens Salad with Cheese"
+                ]
+              },
+              {
+                "name": "Sides for All Meals",
+                "kind": "side",
+                "items": [
+                  "Shredded Romaine Lettuce"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Assorted Chilled Fruit",
+                  "Fresh Whole Fruit",
+                  "Fresh Carrots",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Sliced Cucumbers"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-08": {
+          "breakfast": {
+            "entrees": [
+              "Mini Cinnis",
+              "WG Banana Muffin"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Co-Jack Cheese"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Main Entrees",
+                "kind": "entree",
+                "items": [
+                  "Mini Cinnis"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "WG Banana Muffin"
                 ]
               },
               {
@@ -1745,90 +913,88 @@
                 "items": [
                   "Fresh Whole Fruit",
                   "Assorted Chilled Fruit",
-                  "Low Fat Mozzarella String Cheese",
-                  "Co-Jack Cheese",
-                  "Strawberry Yogurt"
-                ]
-              }
-            ]
-          },
-          "lunch": {
-            "entrees": [
-              "Whole Grain French Toast Sticks",
-              "Classic Hamburger",
-              "Classic American Cheeseburger",
-              "Crispy Chicken Patty Sandwich",
-              "Classic Cheese Pizza",
-              "Classic Pepperoni Pizza",
-              "Cheese Stuffed Breadsticks"
-            ],
-            "sides": [
-              "Hash Brown Patty",
-              "Pork Sausage Patty",
-              "Co-Jack Cheese",
-              "Dinner Roll",
-              "Fresh Whole Fruit",
-              "Assorted Chilled Fruit",
-              "Fresh Carrots",
-              "Sliced Cucumbers",
-              "Fresh Cherry Tomatoes",
-              "Red and Green Bell Pepper Strips",
-              "Spinach & Romaine Salad",
-              "French Fries"
-            ],
-            "staples": [
-              "Honey Buffalo Sauce",
-              "Marinara Sauce",
-              "Low Fat Milk",
-              "Chocolate Low Fat Milk"
-            ],
-            "stations": [
-              {
-                "name": "Create",
-                "kind": "entree",
-                "items": [
-                  "Whole Grain French Toast Sticks",
-                  "Hash Brown Patty",
-                  "Pork Sausage Patty",
                   "Co-Jack Cheese"
                 ]
-              },
+              }
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Beef Nachos",
+              "Breaded Chicken Drumstick"
+            ],
+            "sides": [
+              "Croutons",
+              "Dinner Roll",
+              "Mixed Greens Salad with Cheese",
+              "Seasoned Black Beans",
+              "Seasoned Corn",
+              "Homemade Pickles",
+              "Assorted Chilled Fruit",
+              "Fresh Whole Fruit",
+              "Fresh Carrots",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Sliced Cucumbers"
+            ],
+            "staples": [
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk",
+              "Margarine"
+            ],
+            "stations": [
               {
-                "name": "Grill",
+                "name": "Main Entrees",
                 "kind": "entree",
                 "items": [
-                  "Classic Hamburger",
-                  "Classic American Cheeseburger",
-                  "Crispy Chicken Patty Sandwich",
-                  "Dinner Roll"
+                  "Beef Nachos"
                 ]
               },
               {
-                "name": "2Mato",
+                "name": "Alternate Entrees",
                 "kind": "entree",
                 "items": [
-                  "Classic Cheese Pizza",
-                  "Classic Pepperoni Pizza",
-                  "Cheese Stuffed Breadsticks"
+                  "Breaded Chicken Drumstick"
+                ]
+              },
+              {
+                "name": "Salad",
+                "kind": "side",
+                "items": [
+                  "Croutons",
+                  "Dinner Roll",
+                  "Mixed Greens Salad with Cheese"
+                ]
+              },
+              {
+                "name": "Sides for All Meals",
+                "kind": "side",
+                "items": [
+                  "Seasoned Black Beans",
+                  "Seasoned Corn",
+                  "Homemade Pickles"
                 ]
               },
               {
                 "name": "Fruit & Vegetable Bar",
                 "kind": "side",
                 "items": [
-                  "Fresh Whole Fruit",
                   "Assorted Chilled Fruit",
+                  "Fresh Whole Fruit",
                   "Fresh Carrots",
-                  "Sliced Cucumbers",
                   "Fresh Cherry Tomatoes",
                   "Red and Green Bell Pepper Strips",
-                  "Spinach & Romaine Salad",
-                  "French Fries"
+                  "Sliced Cucumbers"
                 ]
               }
             ]
           }
-        },
+        }
+      }
+    },
+    "sashabaw-middle": {
+      "label": "Sashabaw Middle",
+      "days": {
         "2026-09-28": {
           "breakfast": {
             "entrees": [
@@ -2529,6 +1695,598 @@
                   "Red and Green Bell Pepper Strips",
                   "Spinach & Romaine Salad",
                   "Seasoned Potato Wedges"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-05": {
+          "breakfast": {
+            "entrees": [
+              "English Muffin with Egg & Cheese",
+              "Hash Brown Patty",
+              "Pork Sausage Patty",
+              "Whole Grain French Toast Sticks",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Breakfast",
+                "kind": "entree",
+                "items": [
+                  "English Muffin with Egg & Cheese",
+                  "Hash Brown Patty",
+                  "Pork Sausage Patty",
+                  "Whole Grain French Toast Sticks"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "Whole Grain Blueberry Muffin",
+                  "WG Banana Muffin",
+                  "WG Chocolate Chocolate Chip Muffin",
+                  "Oatmeal Chocolate Chip BeneFIT Bar",
+                  "Banana Chocolate Chunk BeneFIT Bar",
+                  "Frosted Cinnamon Pop-Tart",
+                  "Strawberry Cream Cheese Stuffed Bagel",
+                  "Mini Cinnis",
+                  "Frosted Strawberry Pop-Tart"
+                ]
+              },
+              {
+                "name": "Sides for All Meals",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Low Fat Mozzarella String Cheese",
+                  "Co-Jack Cheese",
+                  "Strawberry Yogurt"
+                ]
+              }
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Chili Dog",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Tempura Style Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Edamame",
+              "Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "French Fries",
+              "Boston Baked Beans"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Create",
+                "kind": "entree",
+                "items": [
+                  "Chili Dog",
+                  "Edamame"
+                ]
+              },
+              {
+                "name": "Grill",
+                "kind": "entree",
+                "items": [
+                  "Classic Hamburger",
+                  "Classic American Cheeseburger",
+                  "Crispy Chicken Patty Sandwich",
+                  "Spicy Chicken Sandwich",
+                  "Tempura Style Chicken Nuggets",
+                  "Dinner Roll"
+                ]
+              },
+              {
+                "name": "2Mato",
+                "kind": "entree",
+                "items": [
+                  "Classic Cheese Pizza",
+                  "Classic Pepperoni Pizza",
+                  "Cheese Stuffed Breadsticks"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Fresh Carrots",
+                  "Sliced Cucumbers",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Spinach & Romaine Salad",
+                  "French Fries",
+                  "Boston Baked Beans"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-06": {
+          "breakfast": {
+            "entrees": [
+              "Sausage, Egg & Cheese on Croissant",
+              "Tater Tots",
+              "Mini Turkey Corn Dogs",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Wango Mango Juice",
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Breakfast",
+                "kind": "entree",
+                "items": [
+                  "Sausage, Egg & Cheese on Croissant",
+                  "Tater Tots",
+                  "Mini Turkey Corn Dogs"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "Whole Grain Blueberry Muffin",
+                  "WG Banana Muffin",
+                  "WG Chocolate Chocolate Chip Muffin",
+                  "Oatmeal Chocolate Chip BeneFIT Bar",
+                  "Banana Chocolate Chunk BeneFIT Bar",
+                  "Frosted Cinnamon Pop-Tart",
+                  "Strawberry Cream Cheese Stuffed Bagel",
+                  "Mini Cinnis",
+                  "Frosted Strawberry Pop-Tart"
+                ]
+              },
+              {
+                "name": "Sides for All Meals",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Low Fat Mozzarella String Cheese",
+                  "Co-Jack Cheese",
+                  "Strawberry Yogurt"
+                ]
+              }
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Beef Nachos",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Tempura Style Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Brown Rice",
+              "Seasoned Black Beans",
+              "Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "Curly Fries"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Create",
+                "kind": "entree",
+                "items": [
+                  "Beef Nachos",
+                  "Brown Rice",
+                  "Seasoned Black Beans"
+                ]
+              },
+              {
+                "name": "Grill",
+                "kind": "entree",
+                "items": [
+                  "Classic Hamburger",
+                  "Classic American Cheeseburger",
+                  "Crispy Chicken Patty Sandwich",
+                  "Spicy Chicken Sandwich",
+                  "Tempura Style Chicken Nuggets",
+                  "Dinner Roll"
+                ]
+              },
+              {
+                "name": "2Mato",
+                "kind": "entree",
+                "items": [
+                  "Classic Cheese Pizza",
+                  "Classic Pepperoni Pizza",
+                  "Cheese Stuffed Breadsticks"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Fresh Carrots",
+                  "Sliced Cucumbers",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Spinach & Romaine Salad",
+                  "Curly Fries"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-07": {
+          "breakfast": {
+            "entrees": [
+              "Hash Brown Patty",
+              "Turkey Bacon",
+              "Whole Grain French Toast Sticks",
+              "Scrambled Eggs",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Breakfast",
+                "kind": "entree",
+                "items": [
+                  "Hash Brown Patty",
+                  "Turkey Bacon",
+                  "Whole Grain French Toast Sticks",
+                  "Scrambled Eggs"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "Whole Grain Blueberry Muffin",
+                  "WG Banana Muffin",
+                  "WG Chocolate Chocolate Chip Muffin",
+                  "Oatmeal Chocolate Chip BeneFIT Bar",
+                  "Banana Chocolate Chunk BeneFIT Bar",
+                  "Frosted Cinnamon Pop-Tart",
+                  "Strawberry Cream Cheese Stuffed Bagel",
+                  "Mini Cinnis",
+                  "Frosted Strawberry Pop-Tart"
+                ]
+              },
+              {
+                "name": "Sides for All Meals",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Low Fat Mozzarella String Cheese",
+                  "Co-Jack Cheese",
+                  "Strawberry Yogurt"
+                ]
+              }
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Boneless Chicken Wings",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Tempura Style Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks"
+            ],
+            "sides": [
+              "Macaroni and Cheese",
+              "Roasted Broccoli",
+              "Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "French Fries"
+            ],
+            "staples": [
+              "Buffalo Ranch Sauce",
+              "Dip'n Sauce",
+              "Honey Buffalo Sauce",
+              "BBQ Sauce",
+              "Light Ranch Dressing",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Create",
+                "kind": "entree",
+                "items": [
+                  "Boneless Chicken Wings",
+                  "Macaroni and Cheese",
+                  "Roasted Broccoli"
+                ]
+              },
+              {
+                "name": "Grill",
+                "kind": "entree",
+                "items": [
+                  "Classic Hamburger",
+                  "Classic American Cheeseburger",
+                  "Crispy Chicken Patty Sandwich",
+                  "Spicy Chicken Sandwich",
+                  "Tempura Style Chicken Nuggets",
+                  "Dinner Roll"
+                ]
+              },
+              {
+                "name": "2Mato",
+                "kind": "entree",
+                "items": [
+                  "Classic Cheese Pizza",
+                  "Classic Pepperoni Pizza",
+                  "Cheese Stuffed Breadsticks"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Fresh Carrots",
+                  "Sliced Cucumbers",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Spinach & Romaine Salad",
+                  "French Fries"
+                ]
+              }
+            ]
+          }
+        },
+        "2026-10-08": {
+          "breakfast": {
+            "entrees": [
+              "Cheddar Cheese Omelet",
+              "Tater Tots",
+              "Turkey Bacon",
+              "Whole Grain Waffle",
+              "Whole Grain Blueberry Muffin",
+              "WG Banana Muffin",
+              "WG Chocolate Chocolate Chip Muffin",
+              "Oatmeal Chocolate Chip BeneFIT Bar",
+              "Banana Chocolate Chunk BeneFIT Bar",
+              "Frosted Cinnamon Pop-Tart",
+              "Strawberry Cream Cheese Stuffed Bagel",
+              "Mini Cinnis",
+              "Frosted Strawberry Pop-Tart"
+            ],
+            "sides": [
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Low Fat Mozzarella String Cheese",
+              "Co-Jack Cheese",
+              "Strawberry Yogurt"
+            ],
+            "staples": [
+              "Wango Mango Juice",
+              "Cinnamon Goldfish Graham Crackers",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Breakfast",
+                "kind": "entree",
+                "items": [
+                  "Cheddar Cheese Omelet",
+                  "Tater Tots",
+                  "Turkey Bacon",
+                  "Whole Grain Waffle"
+                ]
+              },
+              {
+                "name": "Alternate Entrees",
+                "kind": "entree",
+                "items": [
+                  "Whole Grain Blueberry Muffin",
+                  "WG Banana Muffin",
+                  "WG Chocolate Chocolate Chip Muffin",
+                  "Oatmeal Chocolate Chip BeneFIT Bar",
+                  "Banana Chocolate Chunk BeneFIT Bar",
+                  "Frosted Cinnamon Pop-Tart",
+                  "Strawberry Cream Cheese Stuffed Bagel",
+                  "Mini Cinnis",
+                  "Frosted Strawberry Pop-Tart"
+                ]
+              },
+              {
+                "name": "Sides for All Meals",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Low Fat Mozzarella String Cheese",
+                  "Co-Jack Cheese",
+                  "Strawberry Yogurt"
+                ]
+              }
+            ]
+          },
+          "lunch": {
+            "entrees": [
+              "Macaroni and Cheese",
+              "Classic Hamburger",
+              "Classic American Cheeseburger",
+              "Crispy Chicken Patty Sandwich",
+              "Spicy Chicken Sandwich",
+              "Tempura Style Chicken Nuggets",
+              "Classic Cheese Pizza",
+              "Classic Pepperoni Pizza",
+              "Cheese Stuffed Breadsticks",
+              "Meat Lover's Pizza"
+            ],
+            "sides": [
+              "BBQ Pulled Pork",
+              "Dinner Roll",
+              "Fresh Whole Fruit",
+              "Assorted Chilled Fruit",
+              "Fresh Carrots",
+              "Sliced Cucumbers",
+              "Fresh Cherry Tomatoes",
+              "Red and Green Bell Pepper Strips",
+              "Spinach & Romaine Salad",
+              "Curly Fries"
+            ],
+            "staples": [
+              "Honey Buffalo Sauce",
+              "Marinara Sauce",
+              "Low Fat Milk",
+              "Chocolate Low Fat Milk"
+            ],
+            "stations": [
+              {
+                "name": "Create",
+                "kind": "entree",
+                "items": [
+                  "Macaroni and Cheese",
+                  "BBQ Pulled Pork"
+                ]
+              },
+              {
+                "name": "Grill",
+                "kind": "entree",
+                "items": [
+                  "Classic Hamburger",
+                  "Classic American Cheeseburger",
+                  "Crispy Chicken Patty Sandwich",
+                  "Spicy Chicken Sandwich",
+                  "Tempura Style Chicken Nuggets",
+                  "Dinner Roll"
+                ]
+              },
+              {
+                "name": "2Mato",
+                "kind": "entree",
+                "items": [
+                  "Classic Cheese Pizza",
+                  "Classic Pepperoni Pizza",
+                  "Cheese Stuffed Breadsticks",
+                  "Meat Lover's Pizza"
+                ]
+              },
+              {
+                "name": "Fruit & Vegetable Bar",
+                "kind": "side",
+                "items": [
+                  "Fresh Whole Fruit",
+                  "Assorted Chilled Fruit",
+                  "Fresh Carrots",
+                  "Sliced Cucumbers",
+                  "Fresh Cherry Tomatoes",
+                  "Red and Green Bell Pepper Strips",
+                  "Spinach & Romaine Salad",
+                  "Curly Fries"
                 ]
               }
             ]
