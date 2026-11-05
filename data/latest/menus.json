@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-04T16:29:21Z",
+  "generated_utc": "2026-11-05T16:40:12Z",
   "district": "clarkston",
   "schools": {
     "springfield-plains": {
@@ -1782,6 +1782,7 @@
           "lunch": {
             "entrees": [
               "Whole Grain French Toast Sticks",
+              "Trix Mini French Toast",
               "Classic Hamburger",
               "Classic American Cheeseburger",
               "Crispy Chicken Patty Sandwich",
@@ -1817,6 +1818,7 @@
                 "kind": "entree",
                 "items": [
                   "Whole Grain French Toast Sticks",
+                  "Trix Mini French Toast",
                   "Hash Brown Patty",
                   "Pork Sausage Patty",
                   "Co-Jack Cheese"
